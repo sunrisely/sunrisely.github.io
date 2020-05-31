@@ -64,7 +64,7 @@
 
 <h3 id="侧栏博客卷"><a href="#侧栏博客卷" class="headerlink" title="侧栏博客卷"></a>侧栏博客卷</h3><p>可以在Next的侧边栏中添加博客卷。</p>
 <p>设定<code>icon</code> 值图标进行更换</p>
-<p>设定<code>title</code>值图标进行更换</p>
+<p>设定<code>title</code>值名称进行更换</p>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">links_settings:</span><br><span class="line">  icon: fa fa-link</span><br><span class="line">  title: sunrise</span><br></pre></td></tr></table></figure>
 
 <p>设定<code>links</code>值添加喜欢的链接</p>
@@ -117,6 +117,7 @@
 <p>效果图：</p>
 <p><img src="https://photo-1300227012.cos.ap-nanjing.myqcloud.com/image-20200531195312969.png" alt="image-20200531195312969"></p>
 <hr>
+<p>未完待续吧，之后还有其他优化，会再进行添加。😁😁😁</p>
 ]]></content>
       <categories>
         <category>Hexo</category>
