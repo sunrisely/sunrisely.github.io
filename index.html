@@ -227,7 +227,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-05-31 10:00:59" itemprop="dateModified" datetime="2020-05-31T10:00:59+08:00">2020-05-31</time>
+                <time title="修改时间：2020-05-31 19:56:50" itemprop="dateModified" datetime="2020-05-31T19:56:50+08:00">2020-05-31</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -253,33 +253,14 @@
           <p>目前正在学习使用GitHub的Page服务，搭建博客，记录所学过程！</p>
 <p>使用的是Hexo框架部署，第一次使用难免遇到许多问题，写篇博文，把其中的过程，都记录下来。此篇记录美化功能—-好看是第一生产力！</p>
 <p>我使用的是Next主题，Must样式。</p>
-<h2 id="Start"><a href="#Start" class="headerlink" title="Start"></a>Start</h2><h3 id="下载Next主题，并更改样式"><a href="#下载Next主题，并更改样式" class="headerlink" title="下载Next主题，并更改样式"></a>下载Next主题，并更改样式</h3><p>打开终端，切换到Hexo根目录底下如 <code>G:\blog\sunrisevip</code> 使用<strong>git</strong> 进行克隆</p>
-<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd G:\blog\sunrisevip  //这是我路径，替换为自己</span><br><span class="line"></span><br><span class="line">git clone https://github.com/next<span class="literal">-theme</span>/hexo<span class="literal">-theme</span><span class="literal">-next</span> themes/next</span><br></pre></td></tr></table></figure>
-
-<p>打开站点文件 <code>hexo / _config.yml</code> 找到 <code>theme</code> 然后将其值更改为 <code>true</code> (或另一个主题目录名称)</p>
-<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">theme: next</span><br></pre></td></tr></table></figure>
-
-<p>现在可以再进行验证，终端输入 <code>hexo s</code> 进行部署会出现</p>
-<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">INFO  Start processing</span><br><span class="line">INFO  Hexo is running at http://localhost:<span class="number">4000</span> . Press Ctrl+C to stop.</span><br></pre></td></tr></table></figure>
-
-<p>表示已经本地部署成功，输入链接 <code>http://localhost:4000</code> 进行访问验证。</p>
-<p>成功出现样式后，可以在主题配置文件下 <code>next/_config.yml</code> ，进行样式更改，支持四种方案。取消掉 <strong>#</strong> 进行更改。</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#scheme: Muse</span><br><span class="line">scheme: Mist</span><br><span class="line">#scheme: Pisces</span><br><span class="line">#scheme: Gemini</span><br></pre></td></tr></table></figure>
-
-<hr>
-<h3 id="配置站点图标"><a href="#配置站点图标" class="headerlink" title="配置站点图标"></a>配置站点图标</h3><p>站点图标例如那个可达鸭：</p>
-<p><img src="/.io//favion.png" alt></p>
-<p>图标存放在<code>hexo-site/source/images/</code> ，然后在<code>hexo / _config.yml</code> 中的 <code>favicon</code> 样式中进行修改和重命名。</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">favicon:</span><br><span class="line">  small: /images/favicon-16x16-next.png     //这一行修改</span><br><span class="line">  medium: /images/favicon-32x32-next.png   //这一行修改</span><br><span class="line">  apple_touch_icon: /images/apple-touch-icon-next.png</span><br><span class="line">  safari_pinned_tab: /images/logo.svg</span><br><span class="line">  android_manifest: /images/manifest.json</span><br><span class="line">  ms_browserconfig: /images/browserconfig.xml</span><br></pre></td></tr></table></figure>
-
-<p><strong>favicon</strong> 图标，需经过修改,提供个在线制作网址</p>
-<figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">http://www.bitbug.net/</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="配置头像"><a href="#配置头像" class="headerlink" title="配置头像"></a>配置头像</h3><p>默认情况下，Next主题，侧边栏中不显示头像，通过主题配置文件<code>next/_config.yml</code>下 <code>avater</code> 样式进行修改</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">avatar:</span><br><span class="line">	url: /images/avatar.gif    //这一行替换图片路径</span><br><span class="line">	rounded: true				//没搞懂</span><br><span class="line"> 	rotated: true				//头像将在鼠标悬停时旋转。false关闭</span><br></pre></td></tr></table></figure>
-
-
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/05/30/HEXO%E7%9A%84%E7%BE%8E%E5%8C%96%E4%B9%8B%E8%B7%AF/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
