@@ -34,7 +34,7 @@
 <h3 id="配置头像"><a href="#配置头像" class="headerlink" title="配置头像"></a>配置头像</h3><p>默认情况下，Next主题，侧边栏中不显示头像，通过主题配置文件<code>next/_config.yml</code>下 <code>avater</code> 样式进行修改</p>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">avatar:</span><br><span class="line">	url: <span class="regexp">/images/</span>avatar.gif    <span class="comment">//这一行替换图片路径</span></span><br><span class="line">	rounded: <span class="literal">true</span>				<span class="comment">//没搞懂</span></span><br><span class="line"> 	rotated: <span class="literal">true</span>				<span class="comment">//头像将在鼠标悬停时旋转。false关闭</span></span><br></pre></td></tr></table></figure>
 
-<iframe height="194" width="382" src="https://photo-1300227012.cos.ap-nanjing.myqcloud.com/xuanzhuan.gif"></iframe>
+<iframe height=194 width=382 src="https://photo-1300227012.cos.ap-nanjing.myqcloud.com/xuanzhuan.gif" ></iframe>
 
 
 <h2 id="侧边栏"><a href="#侧边栏" class="headerlink" title="侧边栏"></a>侧边栏</h2><p> 侧边栏样式默认情况下侧边栏仅显示在博文中，位于左侧，可以在<code>next/_config.yml</code>中<code>sidebar</code> 样式中进行修改。</p>
@@ -76,7 +76,7 @@
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">tag_icon: <span class="literal">true</span></span><br></pre></td></tr></table></figure>
 
 <h3 id="打赏"><a href="#打赏" class="headerlink" title="打赏"></a>打赏</h3><p>可以在每篇文章底下添加支付码，以便收到打赏。图片放到主题文件下<code>next\source\images</code> </p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"># Reward (Donate)</span><br><span class="line">reward_settings:</span><br><span class="line">  # If true, reward would be displayed in every article by default.</span><br><span class="line">  # You can show or hide reward in a specific article throuth `reward: true | false` in Front-matter.</span><br><span class="line">  enable: <span class="literal">true</span></span><br><span class="line">  animation: <span class="literal">false</span></span><br><span class="line">  #comment: Donate comment here</span><br><span class="line"></span><br><span class="line">reward:</span><br><span class="line">  wechatpay: <span class="regexp">/images/</span>wechatpay.png</span><br><span class="line">  alipay: <span class="regexp">/images/</span>alipay.png</span><br><span class="line">  bitcoin: <span class="regexp">/images/</span>bitcoin.png</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"># Reward (Donate)</span><br><span class="line">reward_settings:</span><br><span class="line">   enable: <span class="literal">true</span></span><br><span class="line">  animation: <span class="literal">false</span></span><br><span class="line"></span><br><span class="line">reward:</span><br><span class="line">  wechatpay: <span class="regexp">/images/</span>wechatpay.png</span><br><span class="line">  alipay: <span class="regexp">/images/</span>alipay.png</span><br><span class="line">  bitcoin: <span class="regexp">/images/</span>bitcoin.png</span><br></pre></td></tr></table></figure>
 
 <h3 id="订阅链接"><a href="#订阅链接" class="headerlink" title="订阅链接"></a>订阅链接</h3><p> Follow me</p>
 <p>根据自己选择开启，或替换地址，图标</p>
@@ -95,10 +95,10 @@
 <p>打开<code>themes/next/layout/page.njk</code> </p>
 <p><img src="https://photo-1300227012.cos.ap-nanjing.myqcloud.com/image-20200531170710763.png" alt="image-20200531170710763"></p>
 <p>把<code>tagcloud</code> 其中的值修改为：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;&#123; tagcloud(&#123;min_font: 20, max_font: 30, amount: 300, color: true, start_color: &#39;#555&#39;, end_color: &#39;#111&#39;&#125;) &#125;&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;&#123; tagcloud(&#123;min_font: 20,</span><br><span class="line">max_font: 30,</span><br><span class="line">amount: 300,</span><br><span class="line">color: true,</span><br><span class="line">start_color: &#39;#555&#39;,</span><br><span class="line">end_color: &#39;#111&#39;&#125;) &#125;&#125;</span><br></pre></td></tr></table></figure>
 
 <p>现效果：</p>
-<img src="https://photo-1300227012.cos.ap-nanjing.myqcloud.com/image-20200531170956788.png" alt="image-20200531170956788" style="zoom: 67%;">
+<img src="https://photo-1300227012.cos.ap-nanjing.myqcloud.com/image-20200531170956788.png" alt="image-20200531170956788" style="zoom: 67%;" />
 
 <hr>
 <h3 id="更改标签图标"><a href="#更改标签图标" class="headerlink" title="更改标签图标"></a>更改标签图标</h3><p>修改<code>Blog\themes\next\layout\_macro\post.njk</code> 中的<code>tag_indicate</code> 值进行替换<img src="https://photo-1300227012.cos.ap-nanjing.myqcloud.com/image-20200531181142014.png" alt="image-20200531181142014"></p>
@@ -108,7 +108,7 @@
 <h3 id="显示当前浏览进度"><a href="#显示当前浏览进度" class="headerlink" title="显示当前浏览进度"></a>显示当前浏览进度</h3><p>文章顶部浏览进度条修改<code>reading_progress</code> 样式</p>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">reading_progress:    #阅读进度条</span><br><span class="line">  enable: true		#false关闭</span><br><span class="line">  # Available values: top | bottom</span><br><span class="line">  position: top</span><br><span class="line">  #color: "#37c6c0"   更换颜色</span><br><span class="line">  color: <span class="string">"#8fd3f4"</span></span><br><span class="line">  height: <span class="number">3</span>px</span><br></pre></td></tr></table></figure>
 
-<p>效果图：<img src="https://photo-1300227012.cos.ap-nanjing.myqcloud.com/image-20200531194948741.png" alt="image-20200531194948741" style="zoom:80%;"></p>
+<p>效果图：<img src="https://photo-1300227012.cos.ap-nanjing.myqcloud.com/image-20200531194948741.png" alt="image-20200531194948741" style="zoom:80%;" /></p>
 <hr>
 <h3 id="增加书签效果"><a href="#增加书签效果" class="headerlink" title="增加书签效果"></a>增加书签效果</h3><p>在博文右上方出现书签角标，更改<code>bookmark</code> 样式，还可更改其颜色</p>
 <p>下次打开会在当前页面</p>
@@ -116,6 +116,23 @@
 
 <p>效果图：</p>
 <p><img src="https://photo-1300227012.cos.ap-nanjing.myqcloud.com/image-20200531195312969.png" alt="image-20200531195312969"></p>
+<hr>
+<h3 id="代码块高亮"><a href="#代码块高亮" class="headerlink" title="代码块高亮"></a>代码块高亮</h3><p>选取喜欢的代码块主题，进行<code>codeblock</code>样式更改</p>
+<p><code>theme</code>：</p>
+<p><code>light</code>→明亮主题模式下</p>
+<p><code>dark</code>→暗模式下</p>
+<p>在以下网址进行选择</p>
+<figure class="highlight http"><table><tr><td class="code"><pre><span class="line"><span class="attribute">https://github.com/chriskempson/tomorrow-theme</span></span><br><span class="line"><span class="attribute">https://github.com/highlightjs/highlight.js/tree/master/src/styles</span></span><br></pre></td></tr></table></figure>
+
+<hr>
+<p> <code>copy_button</code> ：</p>
+<p>开启代码复制功能</p>
+<p><code>style</code> ：</p>
+<p>更改代码框样式</p>
+<p><code>flat</code> →扁平化风格</p>
+<p><code>mac</code> →Mac样式</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">codeblock:</span><br><span class="line">  theme:</span><br><span class="line">    light: tomorrow-night-eighties</span><br><span class="line">    dark: tomorrow-night-blue</span><br><span class="line"></span><br><span class="line">  copy_button:</span><br><span class="line">    enable: <span class="literal">true</span></span><br><span class="line">    show_result: <span class="literal">true</span></span><br><span class="line">    style: flat</span><br></pre></td></tr></table></figure>
+
 <hr>
 <p>未完待续吧，之后还有其他优化，会再进行添加。😁😁😁</p>
 ]]></content>
