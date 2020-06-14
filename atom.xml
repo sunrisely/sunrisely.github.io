@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://sunrisely.club/"/>
-  <updated>2020-06-04T14:35:19.421Z</updated>
+  <updated>2020-06-14T11:16:32.104Z</updated>
   <id>https://sunrisely.club/</id>
   
   <author>
@@ -17,58 +17,17 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>C:C语言的精神</title>
-    <link href="https://sunrisely.club/2020/06/04/C-C%E8%AF%AD%E8%A8%80%E7%9A%84%E7%B2%BE%E7%A5%9E/"/>
-    <id>https://sunrisely.club/2020/06/04/C-C%E8%AF%AD%E8%A8%80%E7%9A%84%E7%B2%BE%E7%A5%9E/</id>
-    <published>2020-06-04T14:11:48.000Z</published>
-    <updated>2020-06-04T14:35:19.421Z</updated>
-    
-    <content type="html"><![CDATA[<p>学习一门语言先要了解他，明白他的原理。</p><p>这一篇文章主要是写计算机语言的原理，和C的精神。</p><a id="more"></a><h1 id="计算机语言"><a href="#计算机语言" class="headerlink" title="计算机语言"></a>计算机语言</h1><ul><li>程序是用特殊的编程语言写出来表达如何解决问题的。</li><li>不是用编程语言来和计算机交谈，而是描述要求它如何做事情的过程或方法。</li></ul><hr><p>算法：</p><ul><li>我们要让计算机做计算，就需要像这样找出计算的步骤，然后用编程语言写出来</li><li>计算机做的所有的事情都叫做计算</li><li>计算的步骤就是算法</li></ul><hr><p>程序的执行：</p><p>解释：借助一个程序，那个程序能试图理解你的程序，然后按照你的要求执行</p><p>编译：借助一个成团关系，就像一个翻译，把你的程序翻译成计算机真正能懂的语言——机器语言——写的程序，然后，这个机器语言写的程序就能直接执行了。</p><hr><p>解释语言VS编译语言</p><ul><li>语言本无编译/解释之分</li><li>常用的执行方式而已</li><li>解释性语言有特殊的计算能力</li><li>编译型语言优缺点的运算性能</li></ul><hr><img src="https://photo-1300227012.cos.ap-nanjing.myqcloud.com/1.png" alt="1" style="zoom: 50%;" /><hr><h1 id="C的精神"><a href="#C的精神" class="headerlink" title="C的精神"></a>C的精神</h1><p>C的精神：</p><ul><li>信任程序员；</li><li>不要妨碍程序员做需要做的事；</li><li>保持语言精练简单；</li><li>只提供一种方法执行一项操作；</li><li>让程序运行更快，即使不能保证其可移植性。</li></ul><p>在最后一点上，标准委员会的用意是：<strong><font color='#ff9900'>作为实现，应该针对目标计算机来定义最合适的某特定操作，而不是<u>强加一个抽象</u>、<u>统一的定义</u>。在学习C语言过程中，许多方面都反映了这一哲学思想。 </font></strong></p><hr><p>C是编译型语言。C编译器和链接器是把C语言源代码转换成可执行代码的程序。</p><p>C的哲学：</p><ol><li>轻装上阵</li></ol><p>函数是C程序的基本模块。</p><hr><p>严格规定：</p><ul><li><strong><font color='#ff9900'> 程序员要具备抽象和逻辑的思维，并谨慎地处理细节问题。</font></strong></li><li><strong><font color='#ff9900'>编译器不允许这样，对它而言，几乎正确仍然是错误。</font></strong></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;学习一门语言先要了解他，明白他的原理。&lt;/p&gt;
-&lt;p&gt;这一篇文章主要是写计算机语言的原理，和C的精神。&lt;/p&gt;
-    
-    </summary>
-    
-    
-    
-      <category term="C" scheme="https://sunrisely.club/tags/C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>C语言自学攻略</title>
-    <link href="https://sunrisely.club/2020/06/03/C%E8%AF%AD%E8%A8%80%E8%87%AA%E5%AD%A6%E6%94%BB%E7%95%A5/"/>
-    <id>https://sunrisely.club/2020/06/03/C%E8%AF%AD%E8%A8%80%E8%87%AA%E5%AD%A6%E6%94%BB%E7%95%A5/</id>
-    <published>2020-06-03T14:26:21.000Z</published>
-    <updated>2020-06-03T14:44:26.697Z</updated>
-    
-    <content type="html"><![CDATA[<p>我目前是自学C语言，从头开始学起，来写一份我的自学攻略。</p><a id="more"></a><hr><p>我是按照<strong><font color='#ff9900'>陈越姥姥 </font></strong> <a href="https://weibo.com/ttarticle/p/show?id=2309404469829309432076&u=2826785055&m=4470881575738933&cu=5065615876&ru=2826785055&rm=4469829308400752" target="_blank" rel="noopener">C语言自学攻略</a> ，作为大纲进行学习的。可以在微博搜索关注到她，也是非常厉害浙江大学的教授。</p><p>首先在MOOC 找到<strong>浙江大学翁恺老师开设的“程序设计入门——C语言</strong> ，翁凯老师讲的特别好，从基础开始讲起，初学者也不会听不懂。学习完后，可以学习进阶课程。</p><p>平常刷题可以通过“<strong><a href="https://pintia.cn/problem-sets?tab=0" target="_blank" rel="noopener">拼题A</a></strong>” 来刷题，进行练习，检验自己的学习程度。我目前从头在开始，一些基础知识还要巩固完善。目前进度：<img src="https://photo-1300227012.cos.ap-nanjing.myqcloud.com/image-20200603224121869.png" alt="image-20200603224121869"></p><p>我还有一本C语言书，C primer。这本书很好，但是感觉讲的特别详细，前面不会用到的一些知识点，也是会给你说明清楚，初学看着的话可能有点云里雾里的。。。。</p><hr><p>目前就这些吧，详情请看<strong><font color='#ff9900'>陈越姥姥 </font></strong> <a href="https://weibo.com/ttarticle/p/show?id=2309404469829309432076&u=2826785055&m=4470881575738933&cu=5065615876&ru=2826785055&rm=4469829308400752" target="_blank" rel="noopener">C语言自学攻略</a> ，可以点击跳转链接。</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;我目前是自学C语言，从头开始学起，来写一份我的自学攻略。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="C" scheme="https://sunrisely.club/categories/C/"/>
-    
-    
-      <category term="C" scheme="https://sunrisely.club/tags/C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>C:(2)计算</title>
+    <title>C:基础程序详解</title>
     <link href="https://sunrisely.club/2020/06/03/C-%E8%AE%A1%E7%AE%97/"/>
     <id>https://sunrisely.club/2020/06/03/C-%E8%AE%A1%E7%AE%97/</id>
     <published>2020-06-03T07:01:05.000Z</published>
-    <updated>2020-06-04T04:48:30.314Z</updated>
+    <updated>2020-06-14T11:16:32.104Z</updated>
+    
+    <content type="html"><![CDATA[<p> C程序的结构示例</p><a id="more"></a><p><strong><font color='#ff9900'>源程序 </font></strong></p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span>　<span class="meta-string">&lt;stdio.h&gt; </span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="keyword">int</span> num;　</span><br><span class="line">num = <span class="number">1</span>;　</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"I am a simple "</span>);</span><br><span class="line">    </span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"computer.\n"</span>);</span><br><span class="line">    </span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"My　favorite　number　is　%d　because　it　is　first.\n"</span>,num);</span><br><span class="line">    </span><br><span class="line"><span class="keyword">return</span>　<span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><hr><p>![](<a href="https://photo-1300227012.cos.ap-nanjing.myqcloud.com/c-primer" target="_blank" rel="noopener">https://photo-1300227012.cos.ap-nanjing.myqcloud.com/c-primer</a> plus-6.jpg)</p><hr><h2 id="详解"><a href="#详解" class="headerlink" title="详解"></a>详解</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span>　<span class="meta-string">&lt;stdio.h&gt;</span></span></span><br></pre></td></tr></table></figure><p><code>stdio.h</code> 是C编译器软件包的标准部分，它提供键盘输入和屏幕输出的支持。</p><p>圆括号表明 <code>main()</code> 是一个函数名。<code>int</code> 表明<code>main()</code>函数返回一个整数，<code>void</code> 表明<code>main()</code> 不带任何参数。</p>]]></content>
     
     <summary type="html">
+    
+      &lt;p&gt; C程序的结构示例&lt;/p&gt;
     
     </summary>
     
@@ -98,6 +57,53 @@
     
     
       <category term="blog" scheme="https://sunrisely.club/tags/blog/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>C:C语言的精神</title>
+    <link href="https://sunrisely.club/2020/06/01/C-C%E8%AF%AD%E8%A8%80%E7%9A%84%E7%B2%BE%E7%A5%9E/"/>
+    <id>https://sunrisely.club/2020/06/01/C-C%E8%AF%AD%E8%A8%80%E7%9A%84%E7%B2%BE%E7%A5%9E/</id>
+    <published>2020-06-01T14:11:48.000Z</published>
+    <updated>2020-06-05T02:47:30.329Z</updated>
+    
+    <content type="html"><![CDATA[<p>学习一门语言先要了解他，明白他的原理。</p><p>这一篇文章主要是写计算机语言的原理，和C的精神。</p><a id="more"></a><h1 id="计算机语言"><a href="#计算机语言" class="headerlink" title="计算机语言"></a>计算机语言</h1><ul><li>程序是用特殊的编程语言写出来表达如何解决问题的。</li><li>不是用编程语言来和计算机交谈，而是描述要求它如何做事情的过程或方法。</li></ul><hr><p>算法：</p><ul><li>我们要让计算机做计算，就需要像这样找出计算的步骤，然后用编程语言写出来</li><li>计算机做的所有的事情都叫做计算</li><li>计算的步骤就是算法</li></ul><hr><p>程序的执行：</p><p>解释：借助一个程序，那个程序能试图理解你的程序，然后按照你的要求执行</p><p>编译：借助一个成团关系，就像一个翻译，把你的程序翻译成计算机真正能懂的语言——机器语言——写的程序，然后，这个机器语言写的程序就能直接执行了。</p><hr><p>解释语言VS编译语言</p><ul><li>语言本无编译/解释之分</li><li>常用的执行方式而已</li><li>解释性语言有特殊的计算能力</li><li>编译型语言优缺点的运算性能</li></ul><hr><img src="https://photo-1300227012.cos.ap-nanjing.myqcloud.com/1.png" alt="1" style="zoom: 50%;" /><hr><h1 id="C的精神"><a href="#C的精神" class="headerlink" title="C的精神"></a>C的精神</h1><p>C的精神：</p><ul><li>信任程序员；</li><li>不要妨碍程序员做需要做的事；</li><li>保持语言精练简单；</li><li>只提供一种方法执行一项操作；</li><li>让程序运行更快，即使不能保证其可移植性。</li></ul><p>在最后一点上，标准委员会的用意是：<strong><font color='#ff9900'>作为实现，应该针对目标计算机来定义最合适的某特定操作，而不是<u>强加一个抽象</u>、<u>统一的定义</u>。在学习C语言过程中，许多方面都反映了这一哲学思想。 </font></strong></p><hr><p>C是编译型语言。C编译器和链接器是把C语言源代码转换成可执行代码的程序。</p><p>C的哲学：</p><ol><li>轻装上阵</li></ol><p>函数是C程序的基本模块。</p><hr><p>严格规定：</p><ul><li><strong><font color='#ff9900'> 程序员要具备抽象和逻辑的思维，并谨慎地处理细节问题。</font></strong></li><li><strong><font color='#ff9900'>编译器不允许这样，对它而言，几乎正确仍然是错误。</font></strong></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;学习一门语言先要了解他，明白他的原理。&lt;/p&gt;
+&lt;p&gt;这一篇文章主要是写计算机语言的原理，和C的精神。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="C" scheme="https://sunrisely.club/categories/C/"/>
+    
+    
+      <category term="C" scheme="https://sunrisely.club/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>C语言自学攻略</title>
+    <link href="https://sunrisely.club/2020/06/01/C%E8%AF%AD%E8%A8%80%E8%87%AA%E5%AD%A6%E6%94%BB%E7%95%A5/"/>
+    <id>https://sunrisely.club/2020/06/01/C%E8%AF%AD%E8%A8%80%E8%87%AA%E5%AD%A6%E6%94%BB%E7%95%A5/</id>
+    <published>2020-06-01T00:26:21.000Z</published>
+    <updated>2020-06-05T02:47:51.659Z</updated>
+    
+    <content type="html"><![CDATA[<p>我目前是自学C语言，从头开始学起，来写一份我的自学攻略。</p><a id="more"></a><hr><p>我是按照<strong><font color='#ff9900'>陈越姥姥 </font></strong> <a href="https://weibo.com/ttarticle/p/show?id=2309404469829309432076&u=2826785055&m=4470881575738933&cu=5065615876&ru=2826785055&rm=4469829308400752" target="_blank" rel="noopener">C语言自学攻略</a> ，作为大纲进行学习的。可以在微博搜索关注到她，也是非常厉害浙江大学的教授。</p><p>首先在MOOC 找到<strong>浙江大学翁恺老师开设的“程序设计入门——C语言</strong> ，翁凯老师讲的特别好，从基础开始讲起，初学者也不会听不懂。学习完后，可以学习进阶课程。</p><p>平常刷题可以通过“<strong><a href="https://pintia.cn/problem-sets?tab=0" target="_blank" rel="noopener">拼题A</a></strong>” 来刷题，进行练习，检验自己的学习程度。我目前从头在开始，一些基础知识还要巩固完善。目前进度：<img src="https://photo-1300227012.cos.ap-nanjing.myqcloud.com/image-20200603224121869.png" alt="image-20200603224121869"></p><p>我还有一本C语言书，C primer。这本书很好，但是感觉讲的特别详细，前面不会用到的一些知识点，也是会给你说明清楚，初学看着的话可能有点云里雾里的。。。。</p><hr><p>目前就这些吧，详情请看<strong><font color='#ff9900'>陈越姥姥 </font></strong> <a href="https://weibo.com/ttarticle/p/show?id=2309404469829309432076&u=2826785055&m=4470881575738933&cu=5065615876&ru=2826785055&rm=4469829308400752" target="_blank" rel="noopener">C语言自学攻略</a> ，可以点击跳转链接。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;我目前是自学C语言，从头开始学起，来写一份我的自学攻略。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="C" scheme="https://sunrisely.club/categories/C/"/>
+    
+    
+      <category term="C" scheme="https://sunrisely.club/tags/C/"/>
     
   </entry>
   

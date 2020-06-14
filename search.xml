@@ -1,8 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>C:基础程序详解</title>
+    <url>/2020/06/03/C-%E8%AE%A1%E7%AE%97/</url>
+    <content><![CDATA[<p> C程序的结构示例</p>
+<a id="more"></a>
+
+<p><strong><font color='#ff9900'>源程序 </font></strong></p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span>　<span class="meta-string">&lt;stdio.h&gt; </span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="keyword">int</span> num;　</span><br><span class="line">num = <span class="number">1</span>;　</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"I am a simple "</span>);</span><br><span class="line">    </span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"computer.\n"</span>);</span><br><span class="line">    </span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"My　favorite　number　is　%d　because　it　is　first.\n"</span>,num);</span><br><span class="line">    </span><br><span class="line"><span class="keyword">return</span>　<span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p>![](<a href="https://photo-1300227012.cos.ap-nanjing.myqcloud.com/c-primer" target="_blank" rel="noopener">https://photo-1300227012.cos.ap-nanjing.myqcloud.com/c-primer</a> plus-6.jpg)</p>
+<hr>
+<h2 id="详解"><a href="#详解" class="headerlink" title="详解"></a>详解</h2><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span>　<span class="meta-string">&lt;stdio.h&gt;</span></span></span><br></pre></td></tr></table></figure>
+
+<p><code>stdio.h</code> 是C编译器软件包的标准部分，它提供键盘输入和屏幕输出的支持。</p>
+<p>圆括号表明 <code>main()</code> 是一个函数名。<code>int</code> 表明<code>main()</code>函数返回一个整数，<code>void</code> 表明<code>main()</code> 不带任何参数。</p>
+]]></content>
+      <categories>
+        <category>C</category>
+      </categories>
+      <tags>
+        <tag>C</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>C:C语言的精神</title>
-    <url>/2020/06/04/C-C%E8%AF%AD%E8%A8%80%E7%9A%84%E7%B2%BE%E7%A5%9E/</url>
+    <url>/2020/06/01/C-C%E8%AF%AD%E8%A8%80%E7%9A%84%E7%B2%BE%E7%A5%9E/</url>
     <content><![CDATA[<p>学习一门语言先要了解他，明白他的原理。</p>
 <p>这一篇文章主要是写计算机语言的原理，和C的精神。</p>
 <a id="more"></a>
@@ -57,14 +81,6 @@
 <li><strong><font color='#ff9900'>编译器不允许这样，对它而言，几乎正确仍然是错误。</font></strong></li>
 </ul>
 ]]></content>
-      <tags>
-        <tag>C</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>C:(2)计算</title>
-    <url>/2020/06/03/C-%E8%AE%A1%E7%AE%97/</url>
-    <content><![CDATA[]]></content>
       <categories>
         <category>C</category>
       </categories>
@@ -74,7 +90,7 @@
   </entry>
   <entry>
     <title>C语言自学攻略</title>
-    <url>/2020/06/03/C%E8%AF%AD%E8%A8%80%E8%87%AA%E5%AD%A6%E6%94%BB%E7%95%A5/</url>
+    <url>/2020/06/01/C%E8%AF%AD%E8%A8%80%E8%87%AA%E5%AD%A6%E6%94%BB%E7%95%A5/</url>
     <content><![CDATA[<p>我目前是自学C语言，从头开始学起，来写一份我的自学攻略。</p>
 <a id="more"></a>
 
@@ -91,6 +107,69 @@
       </categories>
       <tags>
         <tag>C</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2020/05/26/hello-world/</url>
+    <content><![CDATA[<p>**<font color='#ff9900'><br>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.<br>**</p>
+<p><strong></font></strong></p>
+<a id="more"></a>
+
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>博客常用字颜色</title>
+    <url>/2020/06/03/%E5%8D%9A%E5%AE%A2%E5%B8%B8%E7%94%A8%E5%AD%97%E9%A2%9C%E8%89%B2/</url>
+    <content><![CDATA[<p>在博文的使用中，经常会遇到大边幅同一个色调，关键词不能区分，列举下面几种颜色，进行使用，易区分。</p>
+<a id="more"></a>
+
+<hr>
+<h1 id="颜色名列表"><a href="#颜色名列表" class="headerlink" title="颜色名列表"></a><a href="http://www.w3school.com.cn/tags/html_ref_colornames.asp" target="_blank" rel="noopener">颜色名列表</a></h1><h2 id="绿色-green"><a href="#绿色-green" class="headerlink" title="绿色-green"></a><strong><font color='#2eb82e'>绿色-green</font></strong></h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">**&lt;font color&#x3D;&#39;#2eb82e&#39;&gt; &lt;&#x2F;font&gt;**</span><br></pre></td></tr></table></figure>
+
+
+
+<hr>
+<h2 id="橙色–orange"><a href="#橙色–orange" class="headerlink" title="橙色–orange"></a><font color='#ff9900'><strong>橙色–orange</strong></font></h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">**&lt;font color&#x3D;&#39;#ff9900&#39;&gt; &lt;&#x2F;font&gt;**</span><br></pre></td></tr></table></figure>
+
+
+
+<hr>
+<h2 id="淡黄色"><a href="#淡黄色" class="headerlink" title="淡黄色"></a><font color="#f6d365"><strong>淡黄色</strong></font></h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">**&lt;font color&#x3D;&quot;#f6d365&quot;&gt; &lt;&#x2F;font&gt;**</span><br></pre></td></tr></table></figure>
+
+
+
+<hr>
+<h2 id="蓝色-blue"><a href="#蓝色-blue" class="headerlink" title="蓝色-blue"></a><font color='#1a75ff'><strong>蓝色-blue</strong></font></h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">**&lt;font color&#x3D;&#39;#1a75ff&#39;&gt; &lt;&#x2F;font&gt;**</span><br></pre></td></tr></table></figure>
+
+
+
+<hr>
+<h2 id="浅蓝色"><a href="#浅蓝色" class="headerlink" title="浅蓝色"></a><font color="#8fd3f4"><strong>浅蓝色</strong></font></h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">**&lt;font color&#x3D;&quot;#8fd3f4&quot;&gt; &lt;&#x2F;font&gt;**</span><br></pre></td></tr></table></figure>
+
+
+
+<hr>
+<h2 id="紫色-purple"><a href="#紫色-purple" class="headerlink" title="紫色-purple"></a><font color='#8a00e6'><strong>紫色-purple</strong></font></h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">**&lt;font color&#x3D;&#39;#8a00e6&#39;&gt; &lt;&#x2F;font&gt;**</span><br></pre></td></tr></table></figure>
+
+
+
+<hr>
+]]></content>
+      <tags>
+        <tag>blog</tag>
       </tags>
   </entry>
   <entry>
@@ -235,69 +314,6 @@
       <tags>
         <tag>blog</tag>
         <tag>美化</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/2020/05/26/hello-world/</url>
-    <content><![CDATA[<p>**<font color='#ff9900'><br>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.<br>**</p>
-<p><strong></font></strong></p>
-<a id="more"></a>
-
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>博客常用字颜色</title>
-    <url>/2020/06/03/%E5%8D%9A%E5%AE%A2%E5%B8%B8%E7%94%A8%E5%AD%97%E9%A2%9C%E8%89%B2/</url>
-    <content><![CDATA[<p>在博文的使用中，经常会遇到大边幅同一个色调，关键词不能区分，列举下面几种颜色，进行使用，易区分。</p>
-<a id="more"></a>
-
-<hr>
-<h1 id="颜色名列表"><a href="#颜色名列表" class="headerlink" title="颜色名列表"></a><a href="http://www.w3school.com.cn/tags/html_ref_colornames.asp" target="_blank" rel="noopener">颜色名列表</a></h1><h2 id="绿色-green"><a href="#绿色-green" class="headerlink" title="绿色-green"></a><strong><font color='#2eb82e'>绿色-green</font></strong></h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">**&lt;font color&#x3D;&#39;#2eb82e&#39;&gt; &lt;&#x2F;font&gt;**</span><br></pre></td></tr></table></figure>
-
-
-
-<hr>
-<h2 id="橙色–orange"><a href="#橙色–orange" class="headerlink" title="橙色–orange"></a><font color='#ff9900'><strong>橙色–orange</strong></font></h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">**&lt;font color&#x3D;&#39;#ff9900&#39;&gt; &lt;&#x2F;font&gt;**</span><br></pre></td></tr></table></figure>
-
-
-
-<hr>
-<h2 id="淡黄色"><a href="#淡黄色" class="headerlink" title="淡黄色"></a><font color="#f6d365"><strong>淡黄色</strong></font></h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">**&lt;font color&#x3D;&quot;#f6d365&quot;&gt; &lt;&#x2F;font&gt;**</span><br></pre></td></tr></table></figure>
-
-
-
-<hr>
-<h2 id="蓝色-blue"><a href="#蓝色-blue" class="headerlink" title="蓝色-blue"></a><font color='#1a75ff'><strong>蓝色-blue</strong></font></h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">**&lt;font color&#x3D;&#39;#1a75ff&#39;&gt; &lt;&#x2F;font&gt;**</span><br></pre></td></tr></table></figure>
-
-
-
-<hr>
-<h2 id="浅蓝色"><a href="#浅蓝色" class="headerlink" title="浅蓝色"></a><font color="#8fd3f4"><strong>浅蓝色</strong></font></h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">**&lt;font color&#x3D;&quot;#8fd3f4&quot;&gt; &lt;&#x2F;font&gt;**</span><br></pre></td></tr></table></figure>
-
-
-
-<hr>
-<h2 id="紫色-purple"><a href="#紫色-purple" class="headerlink" title="紫色-purple"></a><font color='#8a00e6'><strong>紫色-purple</strong></font></h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">**&lt;font color&#x3D;&#39;#8a00e6&#39;&gt; &lt;&#x2F;font&gt;**</span><br></pre></td></tr></table></figure>
-
-
-
-<hr>
-]]></content>
-      <tags>
-        <tag>blog</tag>
       </tags>
   </entry>
 </search>
