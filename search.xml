@@ -10,9 +10,11 @@
 <figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span>　<span class="meta-string">&lt;stdio.h&gt; </span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="keyword">int</span> num;　</span><br><span class="line">num = <span class="number">1</span>;　</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"I am a simple "</span>);</span><br><span class="line">    </span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"computer.\n"</span>);</span><br><span class="line">    </span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"My　favorite　number　is　%d　because　it　is　first.\n"</span>,num);</span><br><span class="line">    </span><br><span class="line"><span class="keyword">return</span>　<span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <hr>
-<p>![](<a href="https://photo-1300227012.cos.ap-nanjing.myqcloud.com/c-primer" target="_blank" rel="noopener">https://photo-1300227012.cos.ap-nanjing.myqcloud.com/c-primer</a> plus-6.jpg)</p>
+<img src="https://photo-1300227012.cos.ap-nanjing.myqcloud.com/c-primer%20plus-6.jpg" style="zoom:80%;" >
+
 <hr>
 <h2 id="详解"><a href="#详解" class="headerlink" title="详解"></a>详解</h2><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span>　<span class="meta-string">&lt;stdio.h&gt;</span></span></span><br></pre></td></tr></table></figure>
+
 
 <p><code>stdio.h</code> 是C编译器软件包的标准部分，它提供键盘输入和屏幕输出的支持。</p>
 <p>圆括号表明 <code>main()</code> 是一个函数名。<code>int</code> 表明<code>main()</code>函数返回一个整数，<code>void</code> 表明<code>main()</code> 不带任何参数。</p>
