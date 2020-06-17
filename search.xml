@@ -381,6 +381,7 @@
 <li><code>printf(&quot;%f&quot;,.....)</code></li>
 <li><code>scanf(&quot;%lf&quot;,.....)</code></li>
 </ul>
+<p><strong><font color='#ff9900'>C语言中的 <code>%</code> 作为运算符是用来取余的。</font></strong></p>
 ]]></content>
       <categories>
         <category>C</category>
