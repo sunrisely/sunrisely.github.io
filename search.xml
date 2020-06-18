@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>C:C语言的精神</title>
+    <title>C:C语言的精神及程序结构</title>
     <url>/2020/06/01/C-C%E8%AF%AD%E8%A8%80%E7%9A%84%E7%B2%BE%E7%A5%9E/</url>
     <content><![CDATA[<p>学习一门语言先要了解他，明白他的原理。</p>
 <p>这一篇文章主要是写计算机语言的原理，和C的精神。编程的主要步骤。</p>
@@ -533,5 +533,70 @@
         <tag>blog</tag>
         <tag>美化</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>练习题（逆序的三位数）</title>
+    <url>/2020/06/17/%E7%BB%83%E4%B9%A0%E9%A2%98/</url>
+    <content><![CDATA[<p>这个题目我不会，会了之后详解一下。</p>
+<p>程序每次读入一个正三位数，然后输出逆序的数字。</p>
+<p>如321    123</p>
+<a id="more"></a>
+
+<hr>
+<h1 id="题目内容"><a href="#题目内容" class="headerlink" title="题目内容"></a>题目内容</h1><p>逆序的三位数：</p>
+<p>程序每次读入一个正三位数，然后输出逆序的数字。注意，当输入的数字含有结尾的0时，输出不应带有前导的0。比如输入700，输出应该是7。</p>
+<p>提示：用%10可以得到个位数，用/100可以得到百位数…。将这样得到的三个数字合起来：百位<em>100+十位</em>10+个位，就得到了结果。</p>
+<p><strong><em>注意：除了题目要求的输出，不能输出任何其他内容，比如输入时的提示，输出时的说明等等都不能。这道题目要求输出逆序的数字，程序就只能输出这个数字，除此之外任何内容都不能输出。</em></strong></p>
+<p><strong>输入格式:</strong></p>
+<p>每个测试是一个3位的正整数。</p>
+<p><strong>输出格式：</strong></p>
+<p>输出逆序的数。</p>
+<p><strong>输入样例：</strong></p>
+<p>123</p>
+<p><strong>输出样例：</strong></p>
+<p>321</p>
+<h1 id="详解"><a href="#详解" class="headerlink" title="详解"></a>详解</h1><hr>
+<h2 id="源码"><a href="#源码" class="headerlink" title="源码"></a>源码</h2><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i;</span><br><span class="line">    <span class="keyword">int</span> a;</span><br><span class="line">    <span class="keyword">int</span> b;</span><br><span class="line">    <span class="keyword">int</span> c;</span><br><span class="line">    <span class="keyword">int</span> m;</span><br><span class="line">    </span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;i);</span><br><span class="line">    </span><br><span class="line">    a=i/<span class="number">100</span>;</span><br><span class="line">    b=(i%<span class="number">100</span>)/<span class="number">10</span>;</span><br><span class="line">    c=i%<span class="number">10</span>;</span><br><span class="line">    m=c*<span class="number">100</span>+b*<span class="number">10</span>+a;</span><br><span class="line">    </span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%d"</span>,m);</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><p><img src="https://photo-1300227012.cos.ap-nanjing.myqcloud.com/image-20200618112753143.png" alt="image-20200618112753143"></p>
+<hr>
+<h2 id="详解-1"><a href="#详解-1" class="headerlink" title="详解"></a>详解</h2><p>题目要求是：</p>
+<ul>
+<li><p>输入3位的正整数。</p>
+</li>
+<li><p><strong><font color='#2eb82e'>824</font></strong></p>
+</li>
+<li><p>输出格式，逆序的数。</p>
+</li>
+<li><p><strong><font color='#2eb82e'>428</font></strong></p>
+</li>
+</ul>
+<p>首先可以把 <strong><font color='#2eb82e'>824</font></strong> 看作：a,b,c。</p>
+<ul>
+<li>分别代替为百位，十位，个位。</li>
+</ul>
+<p>百位：<code>/100</code> ,可以得到<strong><font color='#2eb82e'>8</font></strong>。</p>
+<p>十位：<code>(%100)/10</code> ，取余得到<strong><font color='#2eb82e'>24</font></strong>，再<code>/10</code>可以得到<strong><font color='#2eb82e'>2</font></strong>。</p>
+<p>个位：<code>%10</code> ,可以得到<strong><font color='#2eb82e'>4</font></strong>.</p>
+<p><strong><font color='#ff9900'>C语言中的 <code>%</code> 作为运算符是用来取余的。</font></strong></p>
+<p>最后输出时，以<code>c*100+b*10+a</code> 格式输出。</p>
+<p>如果使用：</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="built_in">printf</span>(<span class="string">"%d%d%d"</span>,a,b,c);</span><br></pre></td></tr></table></figure>
+
+<p>输入<strong><font color='#2eb82e'>700</font></strong>时，他就会输出<strong><font color='#2eb82e'>007</font></strong>。</p>
+<p>不符合题目要求，所以不可用。</p>
+]]></content>
+      <categories>
+        <category>C</category>
+      </categories>
+      <tags>
+        <tag>C练习题</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>运算符</title>
+    <url>/2020/06/18/%E8%BF%90%E7%AE%97%E7%AC%A6/</url>
+    <content><![CDATA[]]></content>
   </entry>
 </search>

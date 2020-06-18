@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://sunrisely.club/"/>
-  <updated>2020-06-17T04:41:03.596Z</updated>
+  <updated>2020-06-18T02:32:23.428Z</updated>
   <id>https://sunrisely.club/</id>
   
   <author>
@@ -15,6 +15,46 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>运算符</title>
+    <link href="https://sunrisely.club/2020/06/18/%E8%BF%90%E7%AE%97%E7%AC%A6/"/>
+    <id>https://sunrisely.club/2020/06/18/%E8%BF%90%E7%AE%97%E7%AC%A6/</id>
+    <published>2020-06-18T02:32:23.000Z</published>
+    <updated>2020-06-18T02:32:23.428Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>练习题（逆序的三位数）</title>
+    <link href="https://sunrisely.club/2020/06/17/%E7%BB%83%E4%B9%A0%E9%A2%98/"/>
+    <id>https://sunrisely.club/2020/06/17/%E7%BB%83%E4%B9%A0%E9%A2%98/</id>
+    <published>2020-06-17T04:55:24.000Z</published>
+    <updated>2020-06-18T09:44:38.157Z</updated>
+    
+    <content type="html"><![CDATA[<p>这个题目我不会，会了之后详解一下。</p><p>程序每次读入一个正三位数，然后输出逆序的数字。</p><p>如321    123</p><a id="more"></a><hr><h1 id="题目内容"><a href="#题目内容" class="headerlink" title="题目内容"></a>题目内容</h1><p>逆序的三位数：</p><p>程序每次读入一个正三位数，然后输出逆序的数字。注意，当输入的数字含有结尾的0时，输出不应带有前导的0。比如输入700，输出应该是7。</p><p>提示：用%10可以得到个位数，用/100可以得到百位数…。将这样得到的三个数字合起来：百位<em>100+十位</em>10+个位，就得到了结果。</p><p><strong><em>注意：除了题目要求的输出，不能输出任何其他内容，比如输入时的提示，输出时的说明等等都不能。这道题目要求输出逆序的数字，程序就只能输出这个数字，除此之外任何内容都不能输出。</em></strong></p><p><strong>输入格式:</strong></p><p>每个测试是一个3位的正整数。</p><p><strong>输出格式：</strong></p><p>输出逆序的数。</p><p><strong>输入样例：</strong></p><p>123</p><p><strong>输出样例：</strong></p><p>321</p><h1 id="详解"><a href="#详解" class="headerlink" title="详解"></a>详解</h1><hr><h2 id="源码"><a href="#源码" class="headerlink" title="源码"></a>源码</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i;</span><br><span class="line">    <span class="keyword">int</span> a;</span><br><span class="line">    <span class="keyword">int</span> b;</span><br><span class="line">    <span class="keyword">int</span> c;</span><br><span class="line">    <span class="keyword">int</span> m;</span><br><span class="line">    </span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;i);</span><br><span class="line">    </span><br><span class="line">    a=i/<span class="number">100</span>;</span><br><span class="line">    b=(i%<span class="number">100</span>)/<span class="number">10</span>;</span><br><span class="line">    c=i%<span class="number">10</span>;</span><br><span class="line">    m=c*<span class="number">100</span>+b*<span class="number">10</span>+a;</span><br><span class="line">    </span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%d"</span>,m);</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><hr><h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><p><img src="https://photo-1300227012.cos.ap-nanjing.myqcloud.com/image-20200618112753143.png" alt="image-20200618112753143"></p><hr><h2 id="详解-1"><a href="#详解-1" class="headerlink" title="详解"></a>详解</h2><p>题目要求是：</p><ul><li><p>输入3位的正整数。</p></li><li><p><strong><font color='#2eb82e'>824</font></strong></p></li><li><p>输出格式，逆序的数。</p></li><li><p><strong><font color='#2eb82e'>428</font></strong></p></li></ul><p>首先可以把 <strong><font color='#2eb82e'>824</font></strong> 看作：a,b,c。</p><ul><li>分别代替为百位，十位，个位。</li></ul><p>百位：<code>/100</code> ,可以得到<strong><font color='#2eb82e'>8</font></strong>。</p><p>十位：<code>(%100)/10</code> ，取余得到<strong><font color='#2eb82e'>24</font></strong>，再<code>/10</code>可以得到<strong><font color='#2eb82e'>2</font></strong>。</p><p>个位：<code>%10</code> ,可以得到<strong><font color='#2eb82e'>4</font></strong>.</p><p><strong><font color='#ff9900'>C语言中的 <code>%</code> 作为运算符是用来取余的。</font></strong></p><p>最后输出时，以<code>c*100+b*10+a</code> 格式输出。</p><p>如果使用：</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">printf</span>(<span class="string">"%d%d%d"</span>,a,b,c);</span><br></pre></td></tr></table></figure><p>输入<strong><font color='#2eb82e'>700</font></strong>时，他就会输出<strong><font color='#2eb82e'>007</font></strong>。</p><p>不符合题目要求，所以不可用。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;这个题目我不会，会了之后详解一下。&lt;/p&gt;
+&lt;p&gt;程序每次读入一个正三位数，然后输出逆序的数字。&lt;/p&gt;
+&lt;p&gt;如321    123&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="C" scheme="https://sunrisely.club/categories/C/"/>
+    
+    
+      <category term="C练习题" scheme="https://sunrisely.club/tags/C%E7%BB%83%E4%B9%A0%E9%A2%98/"/>
+    
+  </entry>
   
   <entry>
     <title>变量,赋值</title>
@@ -84,11 +124,11 @@
   </entry>
   
   <entry>
-    <title>C:C语言的精神</title>
+    <title>C:C语言的精神及程序结构</title>
     <link href="https://sunrisely.club/2020/06/01/C-C%E8%AF%AD%E8%A8%80%E7%9A%84%E7%B2%BE%E7%A5%9E/"/>
     <id>https://sunrisely.club/2020/06/01/C-C%E8%AF%AD%E8%A8%80%E7%9A%84%E7%B2%BE%E7%A5%9E/</id>
     <published>2020-06-01T14:11:48.000Z</published>
-    <updated>2020-06-16T09:24:34.901Z</updated>
+    <updated>2020-06-17T04:47:09.864Z</updated>
     
     <content type="html"><![CDATA[<p>学习一门语言先要了解他，明白他的原理。</p><p>这一篇文章主要是写计算机语言的原理，和C的精神。编程的主要步骤。</p><a id="more"></a><h1 id="计算机语言"><a href="#计算机语言" class="headerlink" title="计算机语言"></a>计算机语言</h1><ul><li>程序是用特殊的编程语言写出来表达如何解决问题的。</li><li>不是用编程语言来和计算机交谈，而是描述要求它如何做事情的过程或方法。</li></ul><hr><p><strong>算法：</strong></p><ul><li>我们要让计算机做计算，就需要像这样找出计算的步骤，然后用编程语言写出来</li><li>计算机做的所有的事情都叫做计算</li><li>计算的步骤就是算法</li></ul><hr><p><strong>程序的执行：</strong></p><p>解释：借助一个程序，那个程序能试图理解你的程序，然后按照你的要求执行</p><p>编译：借助一个成团关系，就像一个翻译，把你的程序翻译成计算机真正能懂的语言——机器语言——写的程序，然后，这个机器语言写的程序就能直接执行了。</p><hr><p><strong>解释语言VS编译语言</strong></p><ul><li>语言本无编译/解释之分</li><li>常用的执行方式而已</li><li>解释性语言有特殊的计算能力</li><li>编译型语言优缺点的运算性能</li></ul><hr><img src="https://photo-1300227012.cos.ap-nanjing.myqcloud.com/1.png" alt="1" style="zoom: 50%;" /><hr><h1 id="C的精神"><a href="#C的精神" class="headerlink" title="C的精神"></a>C的精神</h1><p><strong>C的精神：</strong></p><ul><li>信任程序员；</li><li>不要妨碍程序员做需要做的事；</li><li>保持语言精练简单；</li><li>只提供一种方法执行一项操作；</li><li>让程序运行更快，即使不能保证其可移植性。</li></ul><p>在最后一点上，标准委员会的用意是：<strong><font color='#ff9900'>作为实现，应该针对目标计算机来定义最合适的某特定操作，而不是 <u>强加一个抽象</u>、<u>统一的定义</u>。在学习C语言过程中，许多方面都反映了这一哲学思想。 </font></strong></p><hr><p>C是编译型语言。C编译器和链接器是把C语言源代码转换成可执行代码的程序。</p><p><strong>C的哲学：</strong></p><ol><li>轻装上阵</li></ol><p>函数是C程序的基本模块。</p><hr><p><strong>编程步骤:</strong></p><img src="https://photo-1300227012.cos.ap-nanjing.myqcloud.com/clip_image002.png" alt="clip_image002" style="zoom:80%;" /><p><strong>编程的7个步骤：</strong></p><p>在动手写程序之前，要在脑中有清晰的思路。想要程序去做什么首先自己要明确自己想做什么，思考你的程序需要哪些信息，要进行哪些计算和控制，以及程序应该要报告什么信息。在这一步骤中，不涉及具体的计算机语言，应该用一般 <strong><font color='#ff9900'>术语</font></strong> 来描述问题。</p><hr><p><strong>程序结构：</strong></p><ul><li><p>程序由一个或多个函数组成，必须有 main() 函数。</p></li><li><p>函数由函数头和函数体组成。</p></li><li><p>函数头包括函数名、传入该函数的信息类型和函数的返回类型。</p></li><li><p>通过函数名后的圆括号可识别出函数，圆括号里可能为空，可能有参数。</p></li><li><p>函数体被花括号括起来，由一系列语句、声明组成。</p><img src="https://photo-1300227012.cos.ap-nanjing.myqcloud.com/3.png" alt="3" style="zoom:67%;" /></li></ul><hr><p><strong>程序可读性：</strong></p><ul><li>选择有意义的函数名和写注释。</li><li>多使用空行能提高程序的可读性。</li><li>每条语句各占一行。</li><li>分号告诉编译器一条语句在哪里结束、下一条语句在哪里开始。<img src="https://photo-1300227012.cos.ap-nanjing.myqcloud.com/3 .png" alt="3 " style="zoom:80%;" /></li></ul><hr><p><strong>严格规定：</strong></p><ul><li><strong><font color='#ff9900'> 程序员要具备抽象和逻辑的思维，并谨慎地处理细节问题。</font></strong></li><li><strong><font color='#ff9900'>编译器不允许这样，对它而言，几乎正确仍然是错误。</font></strong></li></ul><hr><p><strong><font color="#8fd3f4">独学而无友，则孤陋而寡闻。</font></strong></p>]]></content>
     
