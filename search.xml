@@ -1,6 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>C语言自学攻略</title>
+    <url>/2020/06/01/C%E8%AF%AD%E8%A8%80%E8%87%AA%E5%AD%A6%E6%94%BB%E7%95%A5/</url>
+    <content><![CDATA[<p>我目前是自学C语言，从头开始学起，来写一份我的自学攻略。</p>
+<a id="more"></a>
+
+<hr>
+<p>我是按照<strong><font color='#ff9900'>陈越姥姥 </font></strong> <a href="https://weibo.com/ttarticle/p/show?id=2309404469829309432076&u=2826785055&m=4470881575738933&cu=5065615876&ru=2826785055&rm=4469829308400752" target="_blank" rel="noopener">C语言自学攻略</a> ，作为大纲进行学习的。可以在微博搜索关注到她，也是非常厉害浙江大学的教授。</p>
+<p>首先在MOOC 找到<strong>浙江大学翁恺老师开设的“程序设计入门——C语言</strong> ，翁凯老师讲的特别好，从基础开始讲起，初学者也不会听不懂。学习完后，可以学习进阶课程。</p>
+<p>平常刷题可以通过“<strong><a href="https://pintia.cn/problem-sets?tab=0" target="_blank" rel="noopener">拼题A</a></strong>” 来刷题，进行练习，检验自己的学习程度。我目前从头在开始，一些基础知识还要巩固完善。目前进度：<img src="https://photo-1300227012.cos.ap-nanjing.myqcloud.com/image-20200603224121869.png" alt="image-20200603224121869"></p>
+<p>我还有一本C语言书，C primer。这本书很好，但是感觉讲的特别详细，前面不会用到的一些知识点，也是会给你说明清楚，初学看着的话可能有点云里雾里的。。。。</p>
+<hr>
+<p>目前就这些吧，详情请看<strong><font color='#ff9900'>陈越姥姥 </font></strong> <a href="https://weibo.com/ttarticle/p/show?id=2309404469829309432076&u=2826785055&m=4470881575738933&cu=5065615876&ru=2826785055&rm=4469829308400752" target="_blank" rel="noopener">C语言自学攻略</a> ，可以点击跳转链接。</p>
+]]></content>
+      <categories>
+        <category>C</category>
+      </categories>
+      <tags>
+        <tag>C</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>C:C语言的精神及程序结构</title>
     <url>/2020/06/01/C-C%E8%AF%AD%E8%A8%80%E7%9A%84%E7%B2%BE%E7%A5%9E/</url>
     <content><![CDATA[<p>学习一门语言先要了解他，明白他的原理。</p>
@@ -220,177 +241,6 @@
       </tags>
   </entry>
   <entry>
-    <title>C语言自学攻略</title>
-    <url>/2020/06/01/C%E8%AF%AD%E8%A8%80%E8%87%AA%E5%AD%A6%E6%94%BB%E7%95%A5/</url>
-    <content><![CDATA[<p>我目前是自学C语言，从头开始学起，来写一份我的自学攻略。</p>
-<a id="more"></a>
-
-<hr>
-<p>我是按照<strong><font color='#ff9900'>陈越姥姥 </font></strong> <a href="https://weibo.com/ttarticle/p/show?id=2309404469829309432076&u=2826785055&m=4470881575738933&cu=5065615876&ru=2826785055&rm=4469829308400752" target="_blank" rel="noopener">C语言自学攻略</a> ，作为大纲进行学习的。可以在微博搜索关注到她，也是非常厉害浙江大学的教授。</p>
-<p>首先在MOOC 找到<strong>浙江大学翁恺老师开设的“程序设计入门——C语言</strong> ，翁凯老师讲的特别好，从基础开始讲起，初学者也不会听不懂。学习完后，可以学习进阶课程。</p>
-<p>平常刷题可以通过“<strong><a href="https://pintia.cn/problem-sets?tab=0" target="_blank" rel="noopener">拼题A</a></strong>” 来刷题，进行练习，检验自己的学习程度。我目前从头在开始，一些基础知识还要巩固完善。目前进度：<img src="https://photo-1300227012.cos.ap-nanjing.myqcloud.com/image-20200603224121869.png" alt="image-20200603224121869"></p>
-<p>我还有一本C语言书，C primer。这本书很好，但是感觉讲的特别详细，前面不会用到的一些知识点，也是会给你说明清楚，初学看着的话可能有点云里雾里的。。。。</p>
-<hr>
-<p>目前就这些吧，详情请看<strong><font color='#ff9900'>陈越姥姥 </font></strong> <a href="https://weibo.com/ttarticle/p/show?id=2309404469829309432076&u=2826785055&m=4470881575738933&cu=5065615876&ru=2826785055&rm=4469829308400752" target="_blank" rel="noopener">C语言自学攻略</a> ，可以点击跳转链接。</p>
-]]></content>
-      <categories>
-        <category>C</category>
-      </categories>
-      <tags>
-        <tag>C</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/2020/05/26/hello-world/</url>
-    <content><![CDATA[<p>**<font color='#ff9900'><br>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.<br>**</p>
-<p><strong></font></strong></p>
-<a id="more"></a>
-
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>博客常用字颜色</title>
-    <url>/2020/06/03/%E5%8D%9A%E5%AE%A2%E5%B8%B8%E7%94%A8%E5%AD%97%E9%A2%9C%E8%89%B2/</url>
-    <content><![CDATA[<p>在博文的使用中，经常会遇到大边幅同一个色调，关键词不能区分，列举下面几种颜色，进行使用，易区分。</p>
-<a id="more"></a>
-
-<hr>
-<h1 id="颜色名列表"><a href="#颜色名列表" class="headerlink" title="颜色名列表"></a><a href="http://www.w3school.com.cn/tags/html_ref_colornames.asp" target="_blank" rel="noopener">颜色名列表</a></h1><h2 id="绿色-green"><a href="#绿色-green" class="headerlink" title="绿色-green"></a><strong><font color='#2eb82e'>绿色-green</font></strong></h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">**&lt;font color&#x3D;&#39;#2eb82e&#39;&gt; &lt;&#x2F;font&gt;**</span><br></pre></td></tr></table></figure>
-
-
-
-<hr>
-<h2 id="橙色–orange"><a href="#橙色–orange" class="headerlink" title="橙色–orange"></a><font color='#ff9900'><strong>橙色–orange</strong></font></h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">**&lt;font color&#x3D;&#39;#ff9900&#39;&gt;&lt;&#x2F;font&gt;**</span><br></pre></td></tr></table></figure>
-
-
-
-<hr>
-<h2 id="淡黄色"><a href="#淡黄色" class="headerlink" title="淡黄色"></a><font color="#f6d365"><strong>淡黄色</strong></font></h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">**&lt;font color&#x3D;&quot;#f6d365&quot;&gt; &lt;&#x2F;font&gt;**</span><br></pre></td></tr></table></figure>
-
-
-
-<hr>
-<h2 id="蓝色-blue"><a href="#蓝色-blue" class="headerlink" title="蓝色-blue"></a><font color='#1a75ff'><strong>蓝色-blue</strong></font></h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">**&lt;font color&#x3D;&#39;#1a75ff&#39;&gt; &lt;&#x2F;font&gt;**</span><br></pre></td></tr></table></figure>
-
-
-
-<hr>
-<h2 id="浅蓝色"><a href="#浅蓝色" class="headerlink" title="浅蓝色"></a><font color="#8fd3f4"><strong>浅蓝色</strong></font></h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">**&lt;font color&#x3D;&quot;#8fd3f4&quot;&gt; &lt;&#x2F;font&gt;**</span><br></pre></td></tr></table></figure>
-
-
-
-<hr>
-<h2 id="紫色-purple"><a href="#紫色-purple" class="headerlink" title="紫色-purple"></a><font color='#8a00e6'><strong>紫色-purple</strong></font></h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">**&lt;font color&#x3D;&#39;#8a00e6&#39;&gt; &lt;&#x2F;font&gt;**</span><br></pre></td></tr></table></figure>
-
-
-
-<hr>
-]]></content>
-      <tags>
-        <tag>blog</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>变量,赋值</title>
-    <url>/2020/06/16/%E5%8F%98%E9%87%8F-%E8%B5%8B%E5%80%BC/</url>
-    <content><![CDATA[<p>整理一下前面所学的变量和赋值知识点。</p>
-<a id="more"></a>
-
-<h1 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h1><h2 id="变量-1"><a href="#变量-1" class="headerlink" title="变量"></a><strong>变量</strong></h2><p>和数学不同，a=b在数学中表示关系，即a和b的值一样；</p>
-<p>而在程序设计中，a=b表示要求计算机做一个动作：</p>
-<p>将b的值赋给a。</p>
-<p>关系是静态的，而动作是动态的。</p>
-<p>在数学中，a=b和b=a是等价的，而在程序中，两者的意思完全相反。</p>
-<p><strong><font color='#ff9900'>其他数据类型在程序运行期间可能会改变或被赋值，这些称为 变量（variable）。</font></strong></p>
-<hr>
-<h2 id="变量初始化"><a href="#变量初始化" class="headerlink" title="变量初始化"></a>变量初始化</h2><ul>
-<li>&lt;类型名称&gt;&lt;变量名称&gt;=&lt;初始值&gt;；</li>
-<li><code>int price = 0；</code></li>
-<li><code>int amount = 100；</code></li>
-<li>组合变量定义的时候，也可以在这个定义中单独给单个变量赋初值，如：</li>
-<li><code>int price = 0；</code> <code>int amount = 100；</code></li>
-</ul>
-<hr>
-<p><code>int price = 0；</code></p>
-<p>这一行，定义了一个变量，变量的名字是price， 类型是 int，初始值是0。</p>
-<p><strong><font color='#ff9900'>当赋值发生在定义变量的时候。就是变量初始化。</font></strong></p>
-<p>虽然C语言并没有强制要求所有的变量都在定义的地方做初始化，<strong><font color='#ff9900'>但是所有的变量在第一次被使用(出现在赋值运算符的右边)之前应该被赋值一次。</font></strong></p>
-<p>如果没赢进行初始化赋值，会出现其他的数字，这个数字，好像就是例如，int 的取值范围之类。</p>
-<p><strong><font color='#ff9900'>C是一种由类型的语言，所有的变量在使用之前必须定义或声明，所有的变量必须具有确定的数据类型。数据类型表示在变量中可以存放什么样的数据，变量中只能存放指定类型的数据，程序运行过程中也不能改变变量的类型。</font></strong></p>
-<hr>
-<h2 id="变量名"><a href="#变量名" class="headerlink" title="变量名"></a><strong>变量名</strong></h2><p>变量需要一个名字，变量的名字是一种“标识符”，意思是它是用来识别这个和那个的不同的名字。</p>
-<p>标识符有标识符的构造规则，基本的原则是：标识符只能由字母,数字和下划线组成，数字不可以出现在第一个位置上，C语言的关键字(有的地方叫它们保留字)不可以用作标识符。</p>
-<hr>
-<h1 id="常量"><a href="#常量" class="headerlink" title="常量"></a>常量</h1><p><strong><font color='#ff9900'>有些数据类型在程序使用之前已经预先设定好了，在整个程序的运行过程中没有变化，这些称为 常量（constant）。</font></strong></p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> change = <span class="number">100</span> - price;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>固定不变的数，是常数。直接写在程序里，我们称作直接量。</li>
-<li>更好的方式，是定义一个常量；</li>
-</ul>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> AMOUNT = <span class="number">100</span>;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><p><code>const</code>是一个修饰符,加在<code>int</code>的前面，用来给这个变量加上一个<code>const</code> (不变的) 的属性。</p>
-</li>
-<li><p>这个<code>const</code> 的属性表示这个变量的值一旦初始化，就不能再修改了。</p>
-</li>
-</ul>
-<hr>
-<h1 id="关于整形，浮点数"><a href="#关于整形，浮点数" class="headerlink" title="关于整形，浮点数"></a>关于整形，浮点数</h1><figure class="highlight c"><table><tr><td class="code"><pre><span class="line">(foot + inch / <span class="number">12</span>) * <span class="number">0.3048</span>;</span><br></pre></td></tr></table></figure>
-
-<p>当没有定义浮点数的时候，以整型 * 整型 时候，结果只能是整数。直接把小数点后，都扔掉了。</p>
-<ul>
-<li><strong><font color='#ff9900'>10和10.0在C中是完全不同的数</font></strong></li>
-<li><strong><font color='#ff9900'>10.0是浮点数</font></strong></li>
-</ul>
-<p><strong>解决方法：</strong></p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">(foot + inch / <span class="number">12.0</span>) * <span class="number">0.3048</span>;</span><br></pre></td></tr></table></figure>
-
-<p>把12更改为12.0，使他成为浮点数。</p>
-<p><strong><font color='#ff9900'>去进行运算时，C会将整数转换成浮点数，然后进行 浮点数的运算。</font></strong></p>
-<hr>
-<h2 id="浮点数"><a href="#浮点数" class="headerlink" title="浮点数"></a>浮点数</h2><ul>
-<li>带小数点的数值，浮点这个词的本意就是指小数点是浮动的，是计算机内部表达非整数(包含分数和无理数) 的一种方式。</li>
-<li>另一种方式交定点数，不过在C语言中不会遇到定点数。<strong><font color='#ff9900'>人们借用浮点数这个词来表达所以的带小数点的数。</font></strong></li>
-</ul>
-<hr>
-<h2 id="变量在-printf-和-scanf-中的使用"><a href="#变量在-printf-和-scanf-中的使用" class="headerlink" title="变量在 printf 和 scanf 中的使用"></a>变量在 <code>printf</code> 和 <code>scanf</code> 中的使用</h2><p>整数</p>
-<ul>
-<li><code>int</code></li>
-<li><code>printf(&quot;%d&quot;,.....)</code></li>
-<li><code>scanf(&quot;%d&quot;,.....)</code></li>
-</ul>
-<p>带小数点的数</p>
-<ul>
-<li><code>float</code> <strong><font color="#8fd3f4">单精度浮点数 </font></strong></li>
-<li><code>double</code>  <strong><font color="#8fd3f4">双精度浮点数 </font></strong></li>
-<li><code>printf(&quot;%f&quot;,.....)</code></li>
-<li><code>scanf(&quot;%lf&quot;,.....)</code></li>
-</ul>
-<p><strong><font color='#ff9900'>C语言中的 <code>%</code> 作为运算符是用来取余的。</font></strong></p>
-]]></content>
-      <categories>
-        <category>C</category>
-      </categories>
-      <tags>
-        <tag>C</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Hexo的美化之路</title>
     <url>/2020/05/30/HEXO%E7%9A%84%E7%BE%8E%E5%8C%96%E4%B9%8B%E8%B7%AF/</url>
     <content><![CDATA[<p>目前正在学习使用GitHub的Page服务，搭建博客，记录所学过程！</p>
@@ -535,6 +385,163 @@
       </tags>
   </entry>
   <entry>
+    <title>变量,赋值</title>
+    <url>/2020/06/16/%E5%8F%98%E9%87%8F-%E8%B5%8B%E5%80%BC/</url>
+    <content><![CDATA[<p>整理一下前面所学的变量和赋值知识点。</p>
+<a id="more"></a>
+
+<h1 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h1><h2 id="变量-1"><a href="#变量-1" class="headerlink" title="变量"></a><strong>变量</strong></h2><p>和数学不同，a=b在数学中表示关系，即a和b的值一样；</p>
+<p>而在程序设计中，a=b表示要求计算机做一个动作：</p>
+<p>将b的值赋给a。</p>
+<p>关系是静态的，而动作是动态的。</p>
+<p>在数学中，a=b和b=a是等价的，而在程序中，两者的意思完全相反。</p>
+<p><strong><font color='#ff9900'>其他数据类型在程序运行期间可能会改变或被赋值，这些称为 变量（variable）。</font></strong></p>
+<hr>
+<h2 id="变量初始化"><a href="#变量初始化" class="headerlink" title="变量初始化"></a>变量初始化</h2><ul>
+<li>&lt;类型名称&gt;&lt;变量名称&gt;=&lt;初始值&gt;；</li>
+<li><code>int price = 0；</code></li>
+<li><code>int amount = 100；</code></li>
+<li>组合变量定义的时候，也可以在这个定义中单独给单个变量赋初值，如：</li>
+<li><code>int price = 0；</code> <code>int amount = 100；</code></li>
+</ul>
+<hr>
+<p><code>int price = 0；</code></p>
+<p>这一行，定义了一个变量，变量的名字是price， 类型是 int，初始值是0。</p>
+<p><strong><font color='#ff9900'>当赋值发生在定义变量的时候。就是变量初始化。</font></strong></p>
+<p>虽然C语言并没有强制要求所有的变量都在定义的地方做初始化，<strong><font color='#ff9900'>但是所有的变量在第一次被使用(出现在赋值运算符的右边)之前应该被赋值一次。</font></strong></p>
+<p>如果没赢进行初始化赋值，会出现其他的数字，这个数字，好像就是例如，int 的取值范围之类。</p>
+<p><strong><font color='#ff9900'>C是一种由类型的语言，所有的变量在使用之前必须定义或声明，所有的变量必须具有确定的数据类型。数据类型表示在变量中可以存放什么样的数据，变量中只能存放指定类型的数据，程序运行过程中也不能改变变量的类型。</font></strong></p>
+<hr>
+<h2 id="变量名"><a href="#变量名" class="headerlink" title="变量名"></a><strong>变量名</strong></h2><p>变量需要一个名字，变量的名字是一种“标识符”，意思是它是用来识别这个和那个的不同的名字。</p>
+<p>标识符有标识符的构造规则，基本的原则是：标识符只能由字母,数字和下划线组成，数字不可以出现在第一个位置上，C语言的关键字(有的地方叫它们保留字)不可以用作标识符。</p>
+<hr>
+<h1 id="常量"><a href="#常量" class="headerlink" title="常量"></a>常量</h1><p><strong><font color='#ff9900'>有些数据类型在程序使用之前已经预先设定好了，在整个程序的运行过程中没有变化，这些称为 常量（constant）。</font></strong></p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> change = <span class="number">100</span> - price;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>固定不变的数，是常数。直接写在程序里，我们称作直接量。</li>
+<li>更好的方式，是定义一个常量；</li>
+</ul>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> AMOUNT = <span class="number">100</span>;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p><code>const</code>是一个修饰符,加在<code>int</code>的前面，用来给这个变量加上一个<code>const</code> (不变的) 的属性。</p>
+</li>
+<li><p>这个<code>const</code> 的属性表示这个变量的值一旦初始化，就不能再修改了。</p>
+</li>
+</ul>
+<hr>
+<h1 id="关于整形，浮点数"><a href="#关于整形，浮点数" class="headerlink" title="关于整形，浮点数"></a>关于整形，浮点数</h1><figure class="highlight c"><table><tr><td class="code"><pre><span class="line">(foot + inch / <span class="number">12</span>) * <span class="number">0.3048</span>;</span><br></pre></td></tr></table></figure>
+
+<p>当没有定义浮点数的时候，以整型 * 整型 时候，结果只能是整数。直接把小数点后，都扔掉了。</p>
+<ul>
+<li><strong><font color='#ff9900'>10和10.0在C中是完全不同的数</font></strong></li>
+<li><strong><font color='#ff9900'>10.0是浮点数</font></strong></li>
+</ul>
+<p><strong>解决方法：</strong></p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">(foot + inch / <span class="number">12.0</span>) * <span class="number">0.3048</span>;</span><br></pre></td></tr></table></figure>
+
+<p>把12更改为12.0，使他成为浮点数。</p>
+<p><strong><font color='#ff9900'>去进行运算时，C会将整数转换成浮点数，然后进行 浮点数的运算。</font></strong></p>
+<hr>
+<h2 id="浮点数"><a href="#浮点数" class="headerlink" title="浮点数"></a>浮点数</h2><ul>
+<li>带小数点的数值，浮点这个词的本意就是指小数点是浮动的，是计算机内部表达非整数(包含分数和无理数) 的一种方式。</li>
+<li>另一种方式交定点数，不过在C语言中不会遇到定点数。<strong><font color='#ff9900'>人们借用浮点数这个词来表达所以的带小数点的数。</font></strong></li>
+</ul>
+<hr>
+<h2 id="变量在-printf-和-scanf-中的使用"><a href="#变量在-printf-和-scanf-中的使用" class="headerlink" title="变量在 printf 和 scanf 中的使用"></a>变量在 <code>printf</code> 和 <code>scanf</code> 中的使用</h2><p>整数</p>
+<ul>
+<li><code>int</code></li>
+<li><code>printf(&quot;%d&quot;,.....)</code></li>
+<li><code>scanf(&quot;%d&quot;,.....)</code></li>
+</ul>
+<p>带小数点的数</p>
+<ul>
+<li><code>float</code> <strong><font color="#8fd3f4">单精度浮点数 </font></strong></li>
+<li><code>double</code>  <strong><font color="#8fd3f4">双精度浮点数 </font></strong></li>
+<li><code>printf(&quot;%f&quot;,.....)</code></li>
+<li><code>scanf(&quot;%lf&quot;,.....)</code></li>
+</ul>
+<p><strong><font color='#ff9900'>C语言中的 <code>%</code> 作为运算符是用来取余的。</font></strong></p>
+<p><strong><font color='#ff9900'><code>%</code>表示取两个数相除以后的余数。</font></strong></p>
+]]></content>
+      <categories>
+        <category>C</category>
+      </categories>
+      <tags>
+        <tag>C</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>表达式</title>
+    <url>/2020/06/18/%E8%BF%90%E7%AE%97%E7%AC%A6/</url>
+    <content><![CDATA[<p>表达式，运算符的关系，以及<strong><font color='#ff9900'><code>i++</code></font></strong>和<strong><font color='#ff9900'><code>i--</code></font></strong>的详解。</p>
+<a id="more"></a>
+
+<p><strong>表达式：</strong></p>
+<p>一个表达式是一系列运算符和算子的组合，用来计算一个值</p>
+<ul>
+<li>运算符是指进行运算的动作，比如加法运算符“+” ，减法运算符“-” 。</li>
+<li>算子是指参与运算的值，这个值可能是常数，也可能是变量，还可能是一个方法的返回值。</li>
+</ul>
+<p><strong>运算符：</strong></p>
+<img src="https://photo-1300227012.cos.ap-nanjing.myqcloud.com/image-20200621184041731.png" alt="image-20200621184041731" style="zoom: 50%;" />
+
+<p><strong>运算符优先级：</strong></p>
+<img src="https://photo-1300227012.cos.ap-nanjing.myqcloud.com/2.png" alt="2" style="zoom:50%;" />
+
+<p><strong>赋值运算符：</strong></p>
+<ul>
+<li>赋值也是运算，也有结果</li>
+<li>a=6的结果是a被赋予的值，也就是6</li>
+<li>a=b=6 <strong>→</strong> a=(b=6)</li>
+</ul>
+<p>复合赋值：</p>
+<img src="https://photo-1300227012.cos.ap-nanjing.myqcloud.com/image-20200621185118718.png" alt="image-20200621185118718" style="zoom: 33%;" />
+
+<p>递增递减运算符：</p>
+<ul>
+<li>“++”和“–”是两个和特殊的运算符， 他们是单目运算符，这个算子还必须是变量。</li>
+<li>这两个运算符分别叫做递增和递减运算符，他们的作用就是给这个变量+1或者-1。</li>
+<li>count++ ；</li>
+<li>count + = 1；</li>
+<li>count = count + 1；</li>
+</ul>
+<p><strong>前缀后缀：</strong></p>
+<ul>
+<li>++和– 可以放在变量的前面，叫做前缀形式，也可以放在变量的后面，叫做后缀形式。</li>
+<li>a++的值是a加1以前的值，而++a的值是加了1以后的值，无论哪个，a自己的值都加了1了。<img src="https://photo-1300227012.cos.ap-nanjing.myqcloud.com/5.png" alt="5" style="zoom:44%;" />
+
+</li>
+</ul>
+<p>++–：</p>
+<p>可以单独使用，但是不要组合进表达式</p>
+<p>个人理解：</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i=<span class="number">14</span>;</span><br><span class="line">	</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"i++=%d\n"</span>,i=i++);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"++i=%d"</span>,i=++i);</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>最后的运行结果是</p>
+<p>i++ = 14</p>
+<p>++i = 15</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> a=<span class="number">14</span>;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">int</span> t1 = a++;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">int</span> t2 = ++a;		</span><br><span class="line">	</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"i++=%d\n"</span>,t1);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"++i=%d"</span>,t2);</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>i++ = 14;</p>
+<p>++i = 16;</p>
+<p>这两个式子的结果不同的原因是：</p>
+<ol start="2">
+<li><p>用于赋值语句，i++先赋值后加1，++i先加1后赋值，如：</p>
+<p>   i=1; y=i++;  等效于：i=1; y=i; i=i+1; 则执行完后 y=1; i=2;</p>
+<p>   i=1; y=++i;  等效于：i=1; i=i+1; y=i; 则执行完后 y=2; i=2;</p>
+</li>
+</ol>
+<p>第一个式子中，是直接求出++i 所以是++i=14 + 1</p>
+<p>第二个式子中，是提前经过定义变量，所以算t2的时候 i++=15后，又进行++i=15+1 =16</p>
+<p>所以t2=16</p>
+]]></content>
+      <tags>
+        <tag>C</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>练习题（逆序的三位数）</title>
     <url>/2020/06/17/%E7%BB%83%E4%B9%A0%E9%A2%98/</url>
     <content><![CDATA[<p>这个题目我不会，会了之后详解一下。</p>
@@ -595,11 +602,66 @@
       </tags>
   </entry>
   <entry>
-    <title>表达式</title>
-    <url>/2020/06/18/%E8%BF%90%E7%AE%97%E7%AC%A6/</url>
-    <content><![CDATA[]]></content>
+    <title>博客常用字颜色</title>
+    <url>/2020/06/03/%E5%8D%9A%E5%AE%A2%E5%B8%B8%E7%94%A8%E5%AD%97%E9%A2%9C%E8%89%B2/</url>
+    <content><![CDATA[<p>在博文的使用中，经常会遇到大边幅同一个色调，关键词不能区分，列举下面几种颜色，进行使用，易区分。</p>
+<a id="more"></a>
+
+<hr>
+<h1 id="颜色名列表"><a href="#颜色名列表" class="headerlink" title="颜色名列表"></a><a href="http://www.w3school.com.cn/tags/html_ref_colornames.asp" target="_blank" rel="noopener">颜色名列表</a></h1><h2 id="绿色-green"><a href="#绿色-green" class="headerlink" title="绿色-green"></a><strong><font color='#2eb82e'>绿色-green</font></strong></h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">**&lt;font color&#x3D;&#39;#2eb82e&#39;&gt; &lt;&#x2F;font&gt;**</span><br></pre></td></tr></table></figure>
+
+
+
+<hr>
+<h2 id="橙色–orange"><a href="#橙色–orange" class="headerlink" title="橙色–orange"></a><font color='#ff9900'><strong>橙色–orange</strong></font></h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">**&lt;font color&#x3D;&#39;#ff9900&#39;&gt;&lt;&#x2F;font&gt;**</span><br></pre></td></tr></table></figure>
+
+
+
+<hr>
+<h2 id="淡黄色"><a href="#淡黄色" class="headerlink" title="淡黄色"></a><font color="#f6d365"><strong>淡黄色</strong></font></h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">**&lt;font color&#x3D;&quot;#f6d365&quot;&gt; &lt;&#x2F;font&gt;**</span><br></pre></td></tr></table></figure>
+
+
+
+<hr>
+<h2 id="蓝色-blue"><a href="#蓝色-blue" class="headerlink" title="蓝色-blue"></a><font color='#1a75ff'><strong>蓝色-blue</strong></font></h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">**&lt;font color&#x3D;&#39;#1a75ff&#39;&gt; &lt;&#x2F;font&gt;**</span><br></pre></td></tr></table></figure>
+
+
+
+<hr>
+<h2 id="浅蓝色"><a href="#浅蓝色" class="headerlink" title="浅蓝色"></a><font color="#8fd3f4"><strong>浅蓝色</strong></font></h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">**&lt;font color&#x3D;&quot;#8fd3f4&quot;&gt; &lt;&#x2F;font&gt;**</span><br></pre></td></tr></table></figure>
+
+
+
+<hr>
+<h2 id="紫色-purple"><a href="#紫色-purple" class="headerlink" title="紫色-purple"></a><font color='#8a00e6'><strong>紫色-purple</strong></font></h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">**&lt;font color&#x3D;&#39;#8a00e6&#39;&gt; &lt;&#x2F;font&gt;**</span><br></pre></td></tr></table></figure>
+
+
+
+<hr>
+]]></content>
       <tags>
-        <tag>C</tag>
+        <tag>blog</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2020/05/26/hello-world/</url>
+    <content><![CDATA[<p>**<font color='#ff9900'><br>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.<br>**</p>
+<p><strong></font></strong></p>
+<a id="more"></a>
+
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+]]></content>
   </entry>
 </search>
