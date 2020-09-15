@@ -20,25 +20,25 @@
     var CONFIG = {"hostname":"sunrisely.club","root":"/","scheme":"Mist","version":"8.0.0-rc.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":true,"color":"#f6d365","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="学习一门语言先要了解他，明白他的原理。 这一篇文章主要是写计算机语言的原理，和C的精神。编程的主要步骤。">
+  <meta name="description" content="我来一步一步整理前面所学，回顾。 这一篇讲 if  语句，后面要用 { }  的原因。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="C:C语言的精神及程序结构">
-<meta property="og:url" content="https://sunrisely.club/2020/06/01/C-C%E8%AF%AD%E8%A8%80%E7%9A%84%E7%B2%BE%E7%A5%9E/index.html">
+<meta property="og:title" content="循环">
+<meta property="og:url" content="https://sunrisely.club/2020/09/15/%E5%BE%AA%E7%8E%AF-1/index.html">
 <meta property="og:site_name" content="Sunrise">
-<meta property="og:description" content="学习一门语言先要了解他，明白他的原理。 这一篇文章主要是写计算机语言的原理，和C的精神。编程的主要步骤。">
+<meta property="og:description" content="我来一步一步整理前面所学，回顾。 这一篇讲 if  语句，后面要用 { }  的原因。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://photo-1300227012.cos.ap-nanjing.myqcloud.com/1.png">
-<meta property="og:image" content="https://photo-1300227012.cos.ap-nanjing.myqcloud.com/clip_image002.png">
-<meta property="og:image" content="https://photo-1300227012.cos.ap-nanjing.myqcloud.com/3.png">
-<meta property="og:image" content="https://photo-1300227012.cos.ap-nanjing.myqcloud.com/3%20.png">
-<meta property="article:published_time" content="2020-06-01T14:11:48.000Z">
-<meta property="article:modified_time" content="2020-06-17T04:47:09.864Z">
+<meta property="og:image" content="https://photo-1300227012.cos.ap-nanjing.myqcloud.com/091510354633_0image-20200915103219770.png">
+<meta property="og:image" content="https://photo-1300227012.cos.ap-nanjing.myqcloud.com/image-20200915110417562.png">
+<meta property="og:image" content="https://photo-1300227012.cos.ap-nanjing.myqcloud.com/4.png">
+<meta property="og:image" content="https://photo-1300227012.cos.ap-nanjing.myqcloud.com/image-20200915111719796.png">
+<meta property="article:published_time" content="2020-09-15T02:10:16.000Z">
+<meta property="article:modified_time" content="2020-09-15T03:19:00.162Z">
 <meta property="article:author" content="sunrise">
 <meta property="article:tag" content="C">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://photo-1300227012.cos.ap-nanjing.myqcloud.com/1.png">
+<meta name="twitter:image" content="https://photo-1300227012.cos.ap-nanjing.myqcloud.com/091510354633_0image-20200915103219770.png">
 
-<link rel="canonical" href="https://sunrisely.club/2020/06/01/C-C%E8%AF%AD%E8%A8%80%E7%9A%84%E7%B2%BE%E7%A5%9E/">
+<link rel="canonical" href="https://sunrisely.club/2020/09/15/%E5%BE%AA%E7%8E%AF-1/">
 
 
 <script id="page-configurations">
@@ -51,7 +51,7 @@
   };
 </script>
 
-  <title>C:C语言的精神及程序结构 | Sunrise</title>
+  <title>循环 | Sunrise</title>
   
 
 
@@ -205,7 +205,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://sunrisely.club/2020/06/01/C-C%E8%AF%AD%E8%A8%80%E7%9A%84%E7%B2%BE%E7%A5%9E/">
+    <link itemprop="mainEntityOfPage" href="https://sunrisely.club/2020/09/15/%E5%BE%AA%E7%8E%AF-1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/uploads/duck.jpeg">
@@ -218,7 +218,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          C:C语言的精神及程序结构
+          循环
         </h1>
 
         <div class="post-meta">
@@ -227,16 +227,10 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
+              
 
-              <time title="创建时间：2020-06-01 22:11:48" itemprop="dateCreated datePublished" datetime="2020-06-01T22:11:48+08:00">2020-06-01</time>
+              <time title="创建时间：2020-09-15 10:10:16 / 修改时间：11:19:00" itemprop="dateCreated datePublished" datetime="2020-09-15T10:10:16+08:00">2020-09-15</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-06-17 12:47:09" itemprop="dateModified" datetime="2020-06-17T12:47:09+08:00">2020-06-17</time>
-              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -258,93 +252,44 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>学习一门语言先要了解他，明白他的原理。</p>
-<p>这一篇文章主要是写计算机语言的原理，和C的精神。编程的主要步骤。</p>
+        <p>我来一步一步整理前面所学，回顾。</p>
+<p>这一篇讲 if  语句，后面要用 { }  的原因。</p>
 <a id="more"></a>
 
-<h1 id="计算机语言"><a href="#计算机语言" class="headerlink" title="计算机语言"></a>计算机语言</h1><ul>
-<li>程序是用特殊的编程语言写出来表达如何解决问题的。</li>
-<li>不是用编程语言来和计算机交谈，而是描述要求它如何做事情的过程或方法。</li>
-</ul>
 <hr>
-<p><strong>算法：</strong></p>
-<ul>
-<li>我们要让计算机做计算，就需要像这样找出计算的步骤，然后用编程语言写出来</li>
-<li>计算机做的所有的事情都叫做计算</li>
-<li>计算的步骤就是算法</li>
-</ul>
+<h1 id="if-语句"><a href="#if-语句" class="headerlink" title="if 语句"></a>if 语句</h1><p>一个基本的if语句由一个关键字if开头，跟上在括号里的一个表示条件的逻辑表达式，然后是一对大括号”{}”之间的若干条语句。如果表示条件的逻辑表达式的结果不是零，那么就执行后面跟着的这对大括号中的语句，否则就跳过这些语句不执行，而继续下面的其他语句</p>
+<p><code>if(total &gt; amount)</code></p>
+<p>​        <code>total += amount+ 1 0;</code></p>
+<p>if语句中，圆括号中有表达式，如果这个表达式的计算结果不是0，那么条件成立。就还会继续做后面 大括号的语句。如果条件不成立，就会跳过。</p>
+<p>if语句还有种形式，if后面没有大括号的时候，紧跟着if后面那一句，就会成为条件要执行的那句话。</p>
+<p><code>if ( total &gt; amount )</code></p>
+<p>​        <code>total += amount+ 10;</code></p>
+<p>在if语句的圆括号后面，要么是有一对大括号，要么跟着一句一句。不能在<code>if ( total &gt; amount )</code>语句后直接 加 ;  只有和 <code>total += amount+ 10;</code> 连在一起，才是整个 <strong><font color='#ff9900'>if</font></strong> 语句。</p>
+<p><strong><font color='#ff9900'>if语句拥有和控制这条赋值语句，决定它是否要被执行。</font></strong></p>
+<p><img src="https://photo-1300227012.cos.ap-nanjing.myqcloud.com/091510354633_0image-20200915103219770.png" alt="091510354633_0image-20200915103219770"></p>
 <hr>
-<p><strong>程序的执行：</strong></p>
-<p>解释：借助一个程序，那个程序能试图理解你的程序，然后按照你的要求执行</p>
-<p>编译：借助一个成团关系，就像一个翻译，把你的程序翻译成计算机真正能懂的语言——机器语言——写的程序，然后，这个机器语言写的程序就能直接执行了。</p>
-<hr>
-<p><strong>解释语言VS编译语言</strong></p>
-<ul>
-<li>语言本无编译/解释之分</li>
-<li>常用的执行方式而已</li>
-<li>解释性语言有特殊的计算能力</li>
-<li>编译型语言优缺点的运算性能</li>
-</ul>
-<hr>
-<img src="https://photo-1300227012.cos.ap-nanjing.myqcloud.com/1.png" alt="1" style="zoom: 50%;" />
+<h1 id="程序"><a href="#程序" class="headerlink" title="程序"></a>程序</h1><h2 id="计算薪水"><a href="#计算薪水" class="headerlink" title="计算薪水"></a>计算薪水</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">const</span> <span class="keyword">double</span> RATE = <span class="number">8.25</span>;  </span><br><span class="line">	<span class="keyword">const</span> <span class="keyword">int</span> STANDARD = <span class="number">40</span>;   </span><br><span class="line">	<span class="keyword">double</span> pay = <span class="number">0.0</span>;</span><br><span class="line">	<span class="keyword">int</span> hours;</span><br><span class="line"></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"请输入工作的小时数: "</span>);</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;hours);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"\n"</span>);</span><br><span class="line">	<span class="keyword">if</span> (hours &gt; STANDARD)</span><br><span class="line">   		pay = STANDARD * RATE + </span><br><span class="line">   			(hours-STANDARD) * (RATE * <span class="number">1.5</span>);</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">   		pay = hours * RATE;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"应付工资: %f\n"</span>, pay);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<hr>
-<h1 id="C的精神"><a href="#C的精神" class="headerlink" title="C的精神"></a>C的精神</h1><p><strong>C的精神：</strong></p>
-<ul>
-<li>信任程序员；</li>
-<li>不要妨碍程序员做需要做的事；</li>
-<li>保持语言精练简单；</li>
-<li>只提供一种方法执行一项操作；</li>
-<li>让程序运行更快，即使不能保证其可移植性。</li>
-</ul>
-<p>在最后一点上，标准委员会的用意是：<strong><font color='#ff9900'>作为实现，应该针对目标计算机来定义最合适的某特定操作，而不是 <u>强加一个抽象</u>、<u>统一的定义</u>。在学习C语言过程中，许多方面都反映了这一哲学思想。 </font></strong></p>
-<hr>
-<p>C是编译型语言。C编译器和链接器是把C语言源代码转换成可执行代码的程序。</p>
-<p><strong>C的哲学：</strong></p>
-<ol>
-<li>轻装上阵</li>
-</ol>
-<p>函数是C程序的基本模块。</p>
-<hr>
-<p><strong>编程步骤:</strong></p>
-<img src="https://photo-1300227012.cos.ap-nanjing.myqcloud.com/clip_image002.png" alt="clip_image002" style="zoom:80%;" />
+<p>这则程序没有使用大括号</p>
+<p><code>else</code><br>           <code>pay = hours * RATE;</code> </p>
+<p>后面打了 ; 表明这则判断语句结束。</p>
+<p>程序判断完 输出: <code>printf(&quot;应付工资: %f\n&quot;, pay);</code></p>
+<p><img src="https://photo-1300227012.cos.ap-nanjing.myqcloud.com/image-20200915110417562.png" alt=""></p>
+<h2 id="判断成绩"><a href="#判断成绩" class="headerlink" title="判断成绩"></a>判断成绩</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">const</span> <span class="keyword">int</span> PASS=<span class="number">60</span>;</span><br><span class="line">	<span class="keyword">int</span> score;</span><br><span class="line"></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"请输入成绩: "</span>);</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;score);</span><br><span class="line">	</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"你输入的成绩是%d.\n"</span>, score);</span><br><span class="line">	<span class="keyword">if</span> ( score &lt; PASS )</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"很遗憾，这个成绩没有及格。"</span>);</span><br><span class="line">	<span class="keyword">else</span> &#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"祝贺你，这个成绩及格了。"</span>);</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"再见\n"</span>);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p><strong>编程的7个步骤：</strong></p>
-<p>在动手写程序之前，要在脑中有清晰的思路。想要程序去做什么首先自己要明确自己想做什么，思考你的程序需要哪些信息，要进行哪些计算和控制，以及程序应该要报告什么信息。在这一步骤中，不涉及具体的计算机语言，应该用一般 <strong><font color='#ff9900'>术语</font></strong> 来描述问题。</p>
+<p>这则程序 <code>else</code> 添加 { }  包括了两个条件</p>
+<p><code>printf(&quot;祝贺你，这个成绩及格了。&quot;);</code><br>        <code>printf(&quot;再见\n&quot;);</code></p>
+<p>运行结果：</p>
+<p><img src="https://photo-1300227012.cos.ap-nanjing.myqcloud.com/4.png" alt="4"></p>
+<p>如果  <code>printf(&quot;再见\n&quot;);</code>   在 else 的括号外，</p>
+<p>那就是 不及格也会显示 再见</p>
+<p><img src="https://photo-1300227012.cos.ap-nanjing.myqcloud.com/image-20200915111719796.png" alt="image-20200915111719796"></p>
+<p>这就是 在判断语句中 { } 里和 { } 外的区别。</p>
 <hr>
-<p><strong>程序结构：</strong></p>
-<ul>
-<li><p>程序由一个或多个函数组成，必须有 main() 函数。</p>
-</li>
-<li><p>函数由函数头和函数体组成。</p>
-</li>
-<li><p>函数头包括函数名、传入该函数的信息类型和函数的返回类型。</p>
-</li>
-<li><p>通过函数名后的圆括号可识别出函数，圆括号里可能为空，可能有参数。</p>
-</li>
-<li><p>函数体被花括号括起来，由一系列语句、声明组成。</p>
-<img src="https://photo-1300227012.cos.ap-nanjing.myqcloud.com/3.png" alt="3" style="zoom:67%;" />
-
-
-
-</li>
+<h1 id="为什么强调if和else后面要用"><a href="#为什么强调if和else后面要用" class="headerlink" title="为什么强调if和else后面要用{}"></a>为什么强调if和else后面要用{}</h1><ul>
+<li><strong><font color='#ff9900'>有大括号语句执行括号内的所有语句，没有括号则只执行一条语句。</font></strong></li>
+<li><strong><font color='#ff9900'>方便阅读容易找到所属关系。</font></strong></li>
 </ul>
-<hr>
-<p><strong>程序可读性：</strong></p>
-<ul>
-<li>选择有意义的函数名和写注释。</li>
-<li>多使用空行能提高程序的可读性。</li>
-<li>每条语句各占一行。</li>
-<li>分号告诉编译器一条语句在哪里结束、下一条语句在哪里开始。<img src="https://photo-1300227012.cos.ap-nanjing.myqcloud.com/3 .png" alt="3 " style="zoom:80%;" /></li>
-</ul>
-<hr>
-<p><strong>严格规定：</strong></p>
-<ul>
-<li><strong><font color='#ff9900'> 程序员要具备抽象和逻辑的思维，并谨慎地处理细节问题。</font></strong></li>
-<li><strong><font color='#ff9900'>编译器不允许这样，对它而言，几乎正确仍然是错误。</font></strong></li>
-</ul>
-<hr>
-<p><strong><font color="#8fd3f4">独学而无友，则孤陋而寡闻。</font></strong></p>
 
     </div>
 
@@ -378,13 +323,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2020/06/01/C%E8%AF%AD%E8%A8%80%E8%87%AA%E5%AD%A6%E6%94%BB%E7%95%A5/" rel="prev" title="C语言自学攻略">
-      <i class="fa fa-chevron-left"></i> C语言自学攻略
+    <a href="/2020/09/08/%E5%BE%AA%E7%8E%AF/" rel="prev" title="循环">
+      <i class="fa fa-chevron-left"></i> 循环
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2020/06/03/%E5%8D%9A%E5%AE%A2%E5%B8%B8%E7%94%A8%E5%AD%97%E9%A2%9C%E8%89%B2/" rel="next" title="博客常用字颜色">
-      博客常用字颜色 <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -443,7 +385,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#计算机语言"><span class="nav-number">1.</span> <span class="nav-text">计算机语言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#C的精神"><span class="nav-number">2.</span> <span class="nav-text">C的精神</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#if-语句"><span class="nav-number">1.</span> <span class="nav-text">if 语句</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#程序"><span class="nav-number">2.</span> <span class="nav-text">程序</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#计算薪水"><span class="nav-number">2.1.</span> <span class="nav-text">计算薪水</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#判断成绩"><span class="nav-number">2.2.</span> <span class="nav-text">判断成绩</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#为什么强调if和else后面要用"><span class="nav-number">3.</span> <span class="nav-text">为什么强调if和else后面要用{}</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
