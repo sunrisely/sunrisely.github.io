@@ -20,25 +20,25 @@
     var CONFIG = {"hostname":"sunrisely.club","root":"/","scheme":"Mist","version":"8.0.0-rc.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":true,"color":"#f6d365","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="我来一步一步整理前面所学，回顾。 这一篇讲 if  语句，后面要用 { }  的原因。">
+  <meta name="description" content="这一篇 &lt;循环&gt;">
 <meta property="og:type" content="article">
-<meta property="og:title" content="循环">
-<meta property="og:url" content="https://sunrisely.club/2020/09/15/%E5%BE%AA%E7%8E%AF-1/index.html">
+<meta property="og:title" content="循环-while">
+<meta property="og:url" content="https://sunrisely.club/2020/09/16/%E5%BE%AA%E7%8E%AF-while/index.html">
 <meta property="og:site_name" content="Sunrise">
-<meta property="og:description" content="我来一步一步整理前面所学，回顾。 这一篇讲 if  语句，后面要用 { }  的原因。">
+<meta property="og:description" content="这一篇 &lt;循环&gt;">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://photo-1300227012.cos.ap-nanjing.myqcloud.com/091510354633_0image-20200915103219770.png">
-<meta property="og:image" content="https://photo-1300227012.cos.ap-nanjing.myqcloud.com/image-20200915110417562.png">
-<meta property="og:image" content="https://photo-1300227012.cos.ap-nanjing.myqcloud.com/4.png">
-<meta property="og:image" content="https://photo-1300227012.cos.ap-nanjing.myqcloud.com/image-20200915111719796.png">
-<meta property="article:published_time" content="2020-09-15T02:10:16.000Z">
-<meta property="article:modified_time" content="2020-09-15T03:19:00.162Z">
+<meta property="og:image" content="https://photo-1300227012.cos.ap-nanjing.myqcloud.com/image-20200916104657763.png">
+<meta property="og:image" content="https://photo-1300227012.cos.ap-nanjing.myqcloud.com/image-20200916114216390.png">
+<meta property="og:image" content="https://photo-1300227012.cos.ap-nanjing.myqcloud.com/image-20200916171921248.png">
+<meta property="og:image" content="https://photo-1300227012.cos.ap-nanjing.myqcloud.com/ere.png">
+<meta property="article:published_time" content="2020-09-16T02:15:27.000Z">
+<meta property="article:modified_time" content="2020-09-16T09:36:46.400Z">
 <meta property="article:author" content="sunrise">
 <meta property="article:tag" content="C">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://photo-1300227012.cos.ap-nanjing.myqcloud.com/091510354633_0image-20200915103219770.png">
+<meta name="twitter:image" content="https://photo-1300227012.cos.ap-nanjing.myqcloud.com/image-20200916104657763.png">
 
-<link rel="canonical" href="https://sunrisely.club/2020/09/15/%E5%BE%AA%E7%8E%AF-1/">
+<link rel="canonical" href="https://sunrisely.club/2020/09/16/%E5%BE%AA%E7%8E%AF-while/">
 
 
 <script id="page-configurations">
@@ -51,7 +51,7 @@
   };
 </script>
 
-  <title>循环 | Sunrise</title>
+  <title>循环-while | Sunrise</title>
   
 
 
@@ -205,7 +205,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://sunrisely.club/2020/09/15/%E5%BE%AA%E7%8E%AF-1/">
+    <link itemprop="mainEntityOfPage" href="https://sunrisely.club/2020/09/16/%E5%BE%AA%E7%8E%AF-while/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/uploads/duck.jpeg">
@@ -218,7 +218,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          循环
+          循环-while
         </h1>
 
         <div class="post-meta">
@@ -229,7 +229,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2020-09-15 10:10:16 / 修改时间：11:19:00" itemprop="dateCreated datePublished" datetime="2020-09-15T10:10:16+08:00">2020-09-15</time>
+              <time title="创建时间：2020-09-16 10:15:27 / 修改时间：17:36:46" itemprop="dateCreated datePublished" datetime="2020-09-16T10:15:27+08:00">2020-09-16</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -252,45 +252,57 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>我来一步一步整理前面所学，回顾。</p>
-<p>这一篇讲 if  语句，后面要用 { }  的原因。</p>
+        <p>这一篇<strong><font color='#ff9900'> &lt;循环&gt; </font></strong></p>
 <a id="more"></a>
 
 <hr>
-<h1 id="if-语句"><a href="#if-语句" class="headerlink" title="if 语句"></a>if 语句</h1><p>一个基本的if语句由一个关键字if开头，跟上在括号里的一个表示条件的逻辑表达式，然后是一对大括号”{}”之间的若干条语句。如果表示条件的逻辑表达式的结果不是零，那么就执行后面跟着的这对大括号中的语句，否则就跳过这些语句不执行，而继续下面的其他语句</p>
-<p><code>if(total &gt; amount)</code></p>
-<p>​        <code>total += amount+ 1 0;</code></p>
-<p>if语句中，圆括号中有表达式，如果这个表达式的计算结果不是0，那么条件成立。就还会继续做后面 大括号的语句。如果条件不成立，就会跳过。</p>
-<p>if语句还有种形式，if后面没有大括号的时候，紧跟着if后面那一句，就会成为条件要执行的那句话。</p>
-<p><code>if ( total &gt; amount )</code></p>
-<p>​        <code>total += amount+ 10;</code></p>
-<p>在if语句的圆括号后面，要么是有一对大括号，要么跟着一句一句。不能在<code>if ( total &gt; amount )</code>语句后直接 加 ;  只有和 <code>total += amount+ 10;</code> 连在一起，才是整个 <strong><font color='#ff9900'>if</font></strong> 语句。</p>
-<p><strong><font color='#ff9900'>if语句拥有和控制这条赋值语句，决定它是否要被执行。</font></strong></p>
-<p><img src="https://photo-1300227012.cos.ap-nanjing.myqcloud.com/091510354633_0image-20200915103219770.png" alt="091510354633_0image-20200915103219770"></p>
-<hr>
-<h1 id="程序"><a href="#程序" class="headerlink" title="程序"></a>程序</h1><h2 id="计算薪水"><a href="#计算薪水" class="headerlink" title="计算薪水"></a>计算薪水</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">const</span> <span class="keyword">double</span> RATE = <span class="number">8.25</span>;  </span><br><span class="line">	<span class="keyword">const</span> <span class="keyword">int</span> STANDARD = <span class="number">40</span>;   </span><br><span class="line">	<span class="keyword">double</span> pay = <span class="number">0.0</span>;</span><br><span class="line">	<span class="keyword">int</span> hours;</span><br><span class="line"></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"请输入工作的小时数: "</span>);</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;hours);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"\n"</span>);</span><br><span class="line">	<span class="keyword">if</span> (hours &gt; STANDARD)</span><br><span class="line">   		pay = STANDARD * RATE + </span><br><span class="line">   			(hours-STANDARD) * (RATE * <span class="number">1.5</span>);</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">   		pay = hours * RATE;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"应付工资: %f\n"</span>, pay);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>这则程序没有使用大括号</p>
-<p><code>else</code><br>           <code>pay = hours * RATE;</code> </p>
-<p>后面打了 ; 表明这则判断语句结束。</p>
-<p>程序判断完 输出: <code>printf(&quot;应付工资: %f\n&quot;, pay);</code></p>
-<p><img src="https://photo-1300227012.cos.ap-nanjing.myqcloud.com/image-20200915110417562.png" alt=""></p>
-<h2 id="判断成绩"><a href="#判断成绩" class="headerlink" title="判断成绩"></a>判断成绩</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">const</span> <span class="keyword">int</span> PASS=<span class="number">60</span>;</span><br><span class="line">	<span class="keyword">int</span> score;</span><br><span class="line"></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"请输入成绩: "</span>);</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;score);</span><br><span class="line">	</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"你输入的成绩是%d.\n"</span>, score);</span><br><span class="line">	<span class="keyword">if</span> ( score &lt; PASS )</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"很遗憾，这个成绩没有及格。"</span>);</span><br><span class="line">	<span class="keyword">else</span> &#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"祝贺你，这个成绩及格了。"</span>);</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"再见\n"</span>);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>这则程序 <code>else</code> 添加 { }  包括了两个条件</p>
-<p><code>printf(&quot;祝贺你，这个成绩及格了。&quot;);</code><br>        <code>printf(&quot;再见\n&quot;);</code></p>
-<p>运行结果：</p>
-<p><img src="https://photo-1300227012.cos.ap-nanjing.myqcloud.com/4.png" alt="4"></p>
-<p>如果  <code>printf(&quot;再见\n&quot;);</code>   在 else 的括号外，</p>
-<p>那就是 不及格也会显示 再见</p>
-<p><img src="https://photo-1300227012.cos.ap-nanjing.myqcloud.com/image-20200915111719796.png" alt="image-20200915111719796"></p>
-<p>这就是 在判断语句中 { } 里和 { } 外的区别。</p>
-<hr>
-<h1 id="为什么强调if和else后面要用"><a href="#为什么强调if和else后面要用" class="headerlink" title="为什么强调if和else后面要用{}"></a>为什么强调if和else后面要用{}</h1><ul>
-<li><strong><font color='#ff9900'>有大括号语句执行括号内的所有语句，没有括号则只执行一条语句。</font></strong></li>
-<li><strong><font color='#ff9900'>方便阅读容易找到所属关系。</font></strong></li>
+<h1 id="while-循环"><a href="#while-循环" class="headerlink" title="while-循环"></a>while-循环</h1><p>循环语句可以在满足条件时，不断地重复执行一些动作。</p>
+<p><strong><font color='#ff9900'>if 和 while 的区别</font></strong></p>
+<ul>
+<li>if 是一次性的。条件满足或者不满足时，做完一次都会离开。</li>
+<li>while 条件满足还会做，不满足时就会离开。</li>
 </ul>
+<p>while语句是一个循环语句，它会首先判断一个条件是否满足，如果条件满足，则执行后面紧跟着的语句或语句括号，然后再次判断条件是否满足，如果条件满足则再次执行，直到条件不满足为止。后面紧跟的语句或语句括号，就是 <strong><font color='#ff9900'>循环体 。</font></strong></p>
+<p><strong><font color="#ff9900">{   }</font></strong> 内的叫循环体。</p>
+<p>注意：</p>
+<p>循环体内要有改变条件的机会，不然会死循环出不来。程序运行超时</p>
+<hr>
+<p> <strong><font color='#ff9900'>while 循环 </font></strong></p>
+<ul>
+<li>如果我们把while翻译作 “ 当 ” ，那么一个while循环的意思就是: 当条件满足时，不断地蠢重复循环体内的语句。</li>
+<li>循环执行之前判断是否继续循环，所以有可能循环一次也没用被执行。</li>
+</ul>
+<hr>
+<p>这是如果一直使用 if 去判断，这个数字有多少位数</p>
+<p><img src="https://photo-1300227012.cos.ap-nanjing.myqcloud.com/image-20200916104657763.png" alt="image-20200916104657763"></p>
+<p>如果这样做，虽然也能判断出来。但会非常复杂，繁琐，所以就要用到 <strong><font color='#ff9900'>while</font></strong></p>
+<hr>
+<h2 id="程序"><a href="#程序" class="headerlink" title="程序"></a>程序</h2><p>判断数字，有多少位数</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> x;</span><br><span class="line">	<span class="keyword">int</span> n = <span class="number">0</span>;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;x);</span><br><span class="line">	n++;</span><br><span class="line">	x /=<span class="number">10</span>;</span><br><span class="line">    </span><br><span class="line">	<span class="keyword">while</span> (x &gt; <span class="number">0</span>) &#123;</span><br><span class="line">		n++;</span><br><span class="line">		x /= <span class="number">10</span>;</span><br><span class="line">	&#125;	</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%d\n"</span>,n);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
+<p>解析：</p>
+<p>这个程序使用了 <strong><font color="#8fd3f4"> while</font></strong> 循环</p>
+<p>假设 x = 4567</p>
+<p>n++ = 1</p>
+<p>4567 / 10 = 456</p>
+<p>进入 while 循环，进行判断，</p>
+<p>456 还 &gt; 0 , 继续取余，成为  45 &gt; 0 ,n++ = 2 。</p>
+<p>直到 x &lt; 0 ,达成条件，退出循环。</p>
+<p>每取余一次，n也会记录 +1 +1 +1。</p>
+<p>最后输出结果：</p>
+<p><img src="https://photo-1300227012.cos.ap-nanjing.myqcloud.com/image-20200916114216390.png" alt="image-20200916114216390"></p>
+<hr>
+<h2 id="调试"><a href="#调试" class="headerlink" title="调试"></a>调试</h2><hr>
+<p><img src="https://photo-1300227012.cos.ap-nanjing.myqcloud.com/image-20200916171921248.png" alt="image-20200916171921248"></p>
+<p><code>n++ ;</code></p>
+<p><code>x /= 10;</code></p>
+<p>这一段代码，循环内还出现了一次，所以更改为第二则 代码</p>
+<p>不使用计算机的情况下 来判断会不会成功运行，和预期结果一样。</p>
+<ul>
+<li>人脑模拟计算机的运行，在纸上列出所有的变量，随着程序的进展不断重新计算变量的值。当程序运行结束时，留在表格最下面的就是程序的最终结果。</li>
+</ul>
+<p>在纸上运行的结果：</p>
+<img src="https://photo-1300227012.cos.ap-nanjing.myqcloud.com/ere.png" alt="ere" style="zoom:67%;" />
     </div>
 
     
@@ -323,8 +335,8 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2020/09/08/%E5%BE%AA%E7%8E%AF/" rel="prev" title="循环">
-      <i class="fa fa-chevron-left"></i> 循环
+    <a href="/2020/09/15/%E5%88%A4%E6%96%AD-if/" rel="prev" title="判断-if">
+      <i class="fa fa-chevron-left"></i> 判断-if
     </a></div>
       <div class="post-nav-item"></div>
     </div>
@@ -385,7 +397,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#if-语句"><span class="nav-number">1.</span> <span class="nav-text">if 语句</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#程序"><span class="nav-number">2.</span> <span class="nav-text">程序</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#计算薪水"><span class="nav-number">2.1.</span> <span class="nav-text">计算薪水</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#判断成绩"><span class="nav-number">2.2.</span> <span class="nav-text">判断成绩</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#为什么强调if和else后面要用"><span class="nav-number">3.</span> <span class="nav-text">为什么强调if和else后面要用{}</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#while-循环"><span class="nav-number">1.</span> <span class="nav-text">while-循环</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#程序"><span class="nav-number">1.1.</span> <span class="nav-text">程序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#调试"><span class="nav-number">1.2.</span> <span class="nav-text">调试</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -401,7 +413,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">11</span>
+          <span class="site-state-item-count">12</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
