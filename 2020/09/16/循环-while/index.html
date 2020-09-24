@@ -31,8 +31,10 @@
 <meta property="og:image" content="https://photo-1300227012.cos.ap-nanjing.myqcloud.com/image-20200916114216390.png">
 <meta property="og:image" content="https://photo-1300227012.cos.ap-nanjing.myqcloud.com/image-20200916171921248.png">
 <meta property="og:image" content="https://photo-1300227012.cos.ap-nanjing.myqcloud.com/ere.png">
+<meta property="og:image" content="https://photo-1300227012.cos.ap-nanjing.myqcloud.com/image-20200924163325930.png">
+<meta property="og:image" content="https://photo-1300227012.cos.ap-nanjing.myqcloud.com/image-20200924163759063.png">
 <meta property="article:published_time" content="2020-09-16T02:15:27.000Z">
-<meta property="article:modified_time" content="2020-09-16T09:36:46.400Z">
+<meta property="article:modified_time" content="2020-09-24T08:58:01.835Z">
 <meta property="article:author" content="sunrise">
 <meta property="article:tag" content="C">
 <meta name="twitter:card" content="summary">
@@ -227,10 +229,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2020-09-16 10:15:27 / 修改时间：17:36:46" itemprop="dateCreated datePublished" datetime="2020-09-16T10:15:27+08:00">2020-09-16</time>
+              <time title="创建时间：2020-09-16 10:15:27" itemprop="dateCreated datePublished" datetime="2020-09-16T10:15:27+08:00">2020-09-16</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-09-24 16:58:01" itemprop="dateModified" datetime="2020-09-24T16:58:01+08:00">2020-09-24</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -303,6 +311,62 @@
 </ul>
 <p>在纸上运行的结果：</p>
 <img src="https://photo-1300227012.cos.ap-nanjing.myqcloud.com/ere.png" alt="ere" style="zoom:67%;" />
+
+<h2 id="添加printf"><a href="#添加printf" class="headerlink" title="添加printf"></a>添加printf</h2><p>调试：</p>
+<p>还可以在合适的地方加<code>printf</code>  ,作为调试手段</p>
+<p>因为有时候 开不出 <code>debug</code> ，开不出复杂交互东西的时候</p>
+<p>就采用这样一些手段，输出一些句子，比如：</p>
+<ul>
+<li>程序运行到哪</li>
+<li>程序运行的时候里面的变量是什么样</li>
+</ul>
+<p>例如：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">x = <span class="number">3</span></span><br><span class="line"><span class="keyword">while</span> (x &gt; <span class="number">0</span> ) &#123;</span><br><span class="line">	n++;</span><br><span class="line">	x /= <span class="number">10</span>;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"x=%d,n=%d\n"</span>,x ,n);</span><br><span class="line">&#125;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%d\n"</span>, n);</span><br></pre></td></tr></table></figure>
+
+<p>运行结果：</p>
+<p><code>x = 0 ,n = 1</code></p>
+<p><code>1</code></p>
+<p><code>3 / 10 =0 ,n = 1</code> ,这就是会输出运行结果</p>
+<p>如果 <code>x = 0;</code></p>
+<p>就不会有 <code>printf(&quot;x=%d,n=%d\n&quot;,x ,n);</code> 这句的输出，</p>
+<p>因为 x 已经= 0  ,就不会进入循环，不会有后续<code>printf</code>的输出</p>
+<p><strong><font color='#ff9900'>方便调试的小手段。</font></strong></p>
+<hr>
+<h1 id="do-while-循环"><a href="#do-while-循环" class="headerlink" title="do-while 循环"></a>do-while 循环</h1><hr>
+<p><strong><font color='#ff9900'>do-while</font></strong> 在进入循环的时候不做检查，而是在执行完一轮循环体的代码之后，再来检查循环的条件是否满足，如果满足则继续下一轮循环，不满足则结束循环。</p>
+<hr>
+<p>do-while 循环结构：</p>
+ <img src="https://photo-1300227012.cos.ap-nanjing.myqcloud.com/image-20200924163325930.png" alt="image-20200924163325930" style="zoom:80%;" />
+
+<hr>
+<h2 id="示例：数位数的算法"><a href="#示例：数位数的算法" class="headerlink" title="示例：数位数的算法"></a>示例：数位数的算法</h2><ol>
+<li>用户输入 x ;</li>
+<li>初始化 n 为 0 ；</li>
+<li>x = x / 10 ,去掉个位；</li>
+<li>n++;</li>
+<li>如果 x &gt; 0, 回到 3 ；</li>
+<li>否则 n 就是结果。</li>
+</ol>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> x;</span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">"%d, &amp;x"</span>);</span><br><span class="line"><span class="keyword">int</span> n = <span class="number">0</span> ;</span><br><span class="line"><span class="keyword">do</span></span><br><span class="line">&#123;</span><br><span class="line">	x/= <span class="number">10</span>;</span><br><span class="line">	n ++;</span><br><span class="line">&#125; <span class="keyword">while</span> (x &gt; <span class="number">0</span> );</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"%d"</span>,n);</span><br></pre></td></tr></table></figure>
+
+<p>解析：</p>
+<p>do {} 里面的句子，无论如何都是需要做的</p>
+<p>例如 x = 345</p>
+<p>先做一遍do语句中的， 345/10 = 34 ，n = 1</p>
+<p>进入while 中，发现条件满足，再进入do循环体内</p>
+<p>45/10 = 3 ,n =2  ,条件满足，再次进入</p>
+<p>5/10 = 0 , n =3 ，条件不满，退出循环</p>
+<p><strong><font color='#ff9900'>注意while语句后，接分号 ：</font></strong></p>
+<hr>
+<h1 id="两种循环的区别"><a href="#两种循环的区别" class="headerlink" title="两种循环的区别"></a>两种循环的区别</h1><hr>
+<img src="https://photo-1300227012.cos.ap-nanjing.myqcloud.com/image-20200924163759063.png" alt="image-20200924163759063" style="zoom:80%;" />
+
+<ul>
+<li>do-while 循环和while循环很像，区别是在循环体执行结束的时候才来判断条件。也就是说，无论如何，循环都会执行至少一遍，然后再来判断条件。</li>
+<li>与while循环相同的是，条件满足时执行循环，条件不满足时结束循环。</li>
+</ul>
+<hr>
+
     </div>
 
     
@@ -338,7 +402,10 @@
     <a href="/2020/09/15/%E5%88%A4%E6%96%AD-if/" rel="prev" title="判断-if">
       <i class="fa fa-chevron-left"></i> 判断-if
     </a></div>
-      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/2020/09/19/%E5%BE%AA%E7%8E%AF-for/" rel="next" title="循环-for">
+      循环-for <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
       </footer>
     
@@ -397,7 +464,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#while-循环"><span class="nav-number">1.</span> <span class="nav-text">while-循环</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#程序"><span class="nav-number">1.1.</span> <span class="nav-text">程序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#调试"><span class="nav-number">1.2.</span> <span class="nav-text">调试</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#while-循环"><span class="nav-number">1.</span> <span class="nav-text">while-循环</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#程序"><span class="nav-number">1.1.</span> <span class="nav-text">程序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#调试"><span class="nav-number">1.2.</span> <span class="nav-text">调试</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加printf"><span class="nav-number">1.3.</span> <span class="nav-text">添加printf</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#do-while-循环"><span class="nav-number">2.</span> <span class="nav-text">do-while 循环</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#示例：数位数的算法"><span class="nav-number">2.1.</span> <span class="nav-text">示例：数位数的算法</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#两种循环的区别"><span class="nav-number">3.</span> <span class="nav-text">两种循环的区别</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -413,7 +480,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">12</span>
+          <span class="site-state-item-count">13</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
