@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16.ico">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"sunrisely.club","root":"/","scheme":"Mist","version":"8.0.0-rc.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":true,"color":"#f6d365","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="逻辑类型和运算">
+<meta property="og:type" content="article">
+<meta property="og:title" content="进一步的判断与循环">
+<meta property="og:url" content="https://sunrisely.club/2020/10/08/%E8%BF%9B%E4%B8%80%E6%AD%A5%E7%9A%84%E5%88%A4%E6%96%AD%E4%B8%8E%E5%BE%AA%E7%8E%AF/index.html">
+<meta property="og:site_name" content="Sunrise">
+<meta property="og:description" content="逻辑类型和运算">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://photo-1300227012.cos.ap-nanjing.myqcloud.com/%E5%9B%BE%E6%80%AA%E5%85%BD_6513f7a0f8351e2581b856763d02a4b6_37623.png">
+<meta property="og:image" content="https://photo-1300227012.cos.ap-nanjing.myqcloud.com/image-20201009152504884.png">
+<meta property="og:image" content="https://photo-1300227012.cos.ap-nanjing.myqcloud.com/image-20201009152648569.png">
+<meta property="article:published_time" content="2020-10-08T03:47:01.000Z">
+<meta property="article:modified_time" content="2020-10-09T14:00:11.491Z">
+<meta property="article:author" content="sunrise">
+<meta property="article:tag" content="C">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://photo-1300227012.cos.ap-nanjing.myqcloud.com/%E5%9B%BE%E6%80%AA%E5%85%BD_6513f7a0f8351e2581b856763d02a4b6_37623.png">
+
+<link rel="canonical" href="https://sunrisely.club/2020/10/08/%E8%BF%9B%E4%B8%80%E6%AD%A5%E7%9A%84%E5%88%A4%E6%96%AD%E4%B8%8E%E5%BE%AA%E7%8E%AF/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>进一步的判断与循环 | Sunrise</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="Sunrise" type="application/atom+xml">
+</head>
+
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+        <span class="toggle-line toggle-line-first"></span>
+        <span class="toggle-line toggle-line-middle"></span>
+        <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Sunrise</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fas fa-hippo fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+  <a href="https://github.com/sunrisely" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://sunrisely.club/2020/10/08/%E8%BF%9B%E4%B8%80%E6%AD%A5%E7%9A%84%E5%88%A4%E6%96%AD%E4%B8%8E%E5%BE%AA%E7%8E%AF/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/duck.jpeg">
+      <meta itemprop="name" content="sunrise">
+      <meta itemprop="description" content="记录所学">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Sunrise">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          进一步的判断与循环
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-10-08 11:47:01" itemprop="dateCreated datePublished" datetime="2020-10-08T11:47:01+08:00">2020-10-08</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-10-09 22:00:11" itemprop="dateModified" datetime="2020-10-09T22:00:11+08:00">2020-10-09</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/C/" itemprop="url" rel="index"><span itemprop="name">C</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p><strong><font color='#ff9900'>逻辑类型和运算</font></strong></p>
+<a id="more"></a>
+
+<hr>
+<h1 id="bool"><a href="#bool" class="headerlink" title="bool"></a>bool</h1><ul>
+<li>首先需要调用头文件：<code>#include &lt;stdbool.h&gt;</code></li>
+<li>之后就可以使用bool和true、false</li>
+</ul>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdbool.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">bool</span> b = <span class="number">6</span>&gt;<span class="number">5</span>;</span><br><span class="line">	<span class="keyword">bool</span> t = <span class="literal">true</span>;</span><br><span class="line">	t = <span class="number">2</span>;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%d\n"</span>,b);</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>运算结果： <strong><font color='#ff9900'>1</font></strong></p>
+<p>这个程序没有真正bool 量类型</p>
+<p>没有特别的方式去输出bool量，只能得到1，不会是true</p>
+<p>无法让printf 去判断 true 和 false  值</p>
+<h1 id="逻辑运算"><a href="#逻辑运算" class="headerlink" title="逻辑运算"></a>逻辑运算</h1><ul>
+<li>逻辑运算是对逻辑量进行的运算，结果只有 0 或 1</li>
+<li>逻辑量是关系运算或逻辑运算的结果</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center">运算符</th>
+<th align="center">描述</th>
+<th align="center">示例</th>
+<th align="center">结果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><strong><font color='#2eb82e'>!</font></strong></td>
+<td align="center"><strong>逻辑非</strong></td>
+<td align="center"><strong><font color='#000000'>  !a  </font></strong></td>
+<td align="center"><strong><font color='#ff9900'>   如果a是true结果就是false，如果a是false结果就是true  </font></strong></td>
+</tr>
+<tr>
+<td align="center"><strong><font color='#2eb82e'>&amp;&amp;</font></strong></td>
+<td align="center"><strong>逻辑与</strong></td>
+<td align="center"><strong><font color='#000000'> a &amp;&amp; b </font></strong></td>
+<td align="center"><strong><font color='#ff9900'>    如果a和b都是true，结果就是true；否则就是false    </font></strong></td>
+</tr>
+<tr>
+<td align="center"><strong><font color='#2eb82e'> || </font></strong></td>
+<td align="center"><strong>逻辑或</strong></td>
+<td align="center"><strong><font color='#000000'>a || b </font></strong></td>
+<td align="center"><strong><font color='#ff9900'> 如果a和b有一个是true，结果为true；两个都是false，结果为false</font></strong></td>
+</tr>
+</tbody></table>
+<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><ul>
+<li>如果要表达数学中的区间，如：<code>x ∈(4,6)</code> 或 <code>x ∈ [4,6]</code>,应该如何写C的表达式？</li>
+</ul>
+<p>错误：</p>
+<p> <code>4 &lt; x &lt; 6</code></p>
+<p>像 <code>4 &lt; x &lt; 6</code>这样的式子，不是C能正确计算的式子，只是能编译的式子，但意思不一样</p>
+<p>是 4 先判断 是不是 &lt; x ，得到的结果 0 或者 1</p>
+<p>再看  0 或者 1 是否 &lt; 6 ，既然结果只有 0 或者 1</p>
+<p>无论 0 或者 1 都是 &lt; 6 的 </p>
+<p>所以这个式子的结果怎么都是1</p>
+<p>不可能去判断 x 是不是在 4 和 6 之间</p>
+<p>因为 4 &lt; x 的结果是一个逻辑值 (0或1) </p>
+<p><strong>正确</strong>：<strong><font color='#ff9900'>x &gt; 4 &amp;&amp; x &lt; 6 </font></strong></p>
+<hr>
+<ul>
+<li>如何判断一个字符c是否是大写字母？</li>
+</ul>
+<p><strong><font color='#ff9900'>c &gt;= ‘ A ‘ &amp;&amp; c &lt;= ‘ Z ‘</font></strong></p>
+<p>  理解示例：</p>
+<ul>
+<li><code>age &gt; 20 &amp;&amp; age &lt; 30</code></li>
+</ul>
+<p>age 处于20 到 30 中间 ，并且两头都不包含</p>
+<ul>
+<li><code>index &lt; 0 || index &gt; 99</code></li>
+</ul>
+<p>index 不在 0 – 99的范围内，小于0或者大于99</p>
+<ul>
+<li><code>! age &lt; 20</code></li>
+</ul>
+<p>这两面有两个运算符，虽然逻辑运算符要低于比较运算符，但可是! 是单目运算符，还有另一条规则，单目运算符要高于双目运算符。</p>
+<p>表面上看，是age &lt; 20 的反面那就是，age &gt;= 20 ，</p>
+<p>但 ! 会先做和age结合在一起，如果age 是0 ，那么!age就会变成1，如果age 不是0，!age会变成0，再去和20 作比较，因为这个的结果不是0就是1，和&lt;20去做比较话，那整个表达式永远都会是1</p>
+<p>如果要做到age不是 &lt; 20 ，给 age 加括号 ()</p>
+<h2 id="优先级"><a href="#优先级" class="headerlink" title="优先级"></a>优先级</h2><p>三个运算符优先级是各不相同</p>
+<ul>
+<li><code>! &gt; &amp;&amp; &gt; ||</code></li>
+<li><code>!done &amp;&amp; (count &gt; MAX)</code> </li>
+</ul>
+<p>! 优先级最高，会先算</p>
+<p>&amp; 后面有括号，其实可以不必要有，如果 <code>count &gt; MAX</code>并且 <code>done</code> 是 0 ，整个结果才会是 1</p>
+<table>
+<thead>
+<tr>
+<th align="center">优先级</th>
+<th align="center">运算符</th>
+<th align="center">结合性</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">1</td>
+<td align="center">（）</td>
+<td align="center">从左到右</td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="center">！，+ ，- ，++ ，–</td>
+<td align="center">从右到左（单目的+和 - ）</td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td align="center">*，/，%</td>
+<td align="center">从左到右</td>
+</tr>
+<tr>
+<td align="center">4</td>
+<td align="center">+ ，-</td>
+<td align="center">从左到右</td>
+</tr>
+<tr>
+<td align="center">5</td>
+<td align="center">&lt; ，&lt;=， &gt; ，&gt;=</td>
+<td align="center">从左到右</td>
+</tr>
+<tr>
+<td align="center">6</td>
+<td align="center">==，!=</td>
+<td align="center">从左到右</td>
+</tr>
+<tr>
+<td align="center">7</td>
+<td align="center">&amp;&amp;</td>
+<td align="center">从左到右</td>
+</tr>
+<tr>
+<td align="center">8</td>
+<td align="center">||</td>
+<td align="center">从左到右</td>
+</tr>
+<tr>
+<td align="center">9</td>
+<td align="center">=，+=，-=，*=，/=，%=</td>
+<td align="center">从右到左</td>
+</tr>
+</tbody></table>
+<hr>
+<p>替换成逻辑运算的式子</p>
+<p><img src="https://photo-1300227012.cos.ap-nanjing.myqcloud.com/%E5%9B%BE%E6%80%AA%E5%85%BD_6513f7a0f8351e2581b856763d02a4b6_37623.png" alt="图怪兽_6513f7a0f8351e2581b856763d02a4b6_37623"></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(i! = j &amp;&amp; i!=k &amp;&amp; j!=k)</span><br></pre></td></tr></table></figure>
+
+<h3 id="单目运算符"><a href="#单目运算符" class="headerlink" title="单目运算符"></a>单目运算符</h3><p>单目运算是指运算符包括<a href="https://baike.baidu.com/item/赋值运算符/2482721" target="_blank" rel="noopener">赋值运算符</a>、算术运算符、<a href="https://baike.baidu.com/item/逻辑运算符/4123505" target="_blank" rel="noopener">逻辑运算符</a>、位逻辑运算符、位移运算符、<a href="https://baike.baidu.com/item/关系运算符/352774" target="_blank" rel="noopener">关系运算符</a>、自增自减运算符。</p>
+<p>单目操作符 也就是只接受一个操作数的操作符</p>
+<p>包括 ! ,++,sizeof ,~,–,(type)</p>
+<p>在运算优先级里位第二位。</p>
+<h3 id="双目运算符"><a href="#双目运算符" class="headerlink" title="双目运算符"></a>双目运算符</h3><p>运算所需变量为两个的运算符叫做双目运算符，或者要求运算对象的个数是2的运算符称为双目运算符。</p>
+<p><strong><font color='#ff9900'>点击查看详细</font></strong><a href="https://baike.baidu.com/item/%E5%8F%8C%E7%9B%AE%E8%BF%90%E7%AE%97%E7%AC%A6/6082535?fr=aladdin" target="_blank" rel="noopener">双目运算符</a></p>
+<h1 id="短路"><a href="#短路" class="headerlink" title="短路"></a>短路</h1><p>逻辑运算是自左向右进行的，如果左边的结果已经能够决定结果了，就不会做右边的计算</p>
+<ul>
+<li>a == 6  &amp;&amp;  b==1</li>
+<li>a == 6  &amp;&amp;  b+=1</li>
+</ul>
+<p>如果 a==6 不成立b==1 就不会去算了</p>
+<p>如果要是右边进行了赋值，需要产生一些结果，所以</p>
+<ul>
+<li>对于&amp;&amp;，左边是false时就不做右边了</li>
+<li>对于||，左边是true 时就不做右边了</li>
+</ul>
+<p>这称为短路 </p>
+<p>所以不要把：<strong><font color='#ff9900'>不要把赋值，包括复合赋值组合进表达式！</font></strong></p>
+<h1 id="条件运算符"><a href="#条件运算符" class="headerlink" title="条件运算符"></a>条件运算符</h1><ul>
+<li>count = (count &gt; 20) ? count -10 : count + 10;</li>
+<li>条件、条件满足时的值和条件不满足时的值</li>
+</ul>
+<p>如：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> ( count &gt; <span class="number">20</span> )</span><br><span class="line">	count = count<span class="number">-10</span>;</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">	count = count+<span class="number">10</span>;</span><br></pre></td></tr></table></figure>
+
+<p>复杂的情况下会带来很大麻烦 </p>
+<p>优先级</p>
+<ul>
+<li>条件运算符的优先级高于赋值运算符，但是低于其他运算符</li>
+</ul>
+<p><img src="https://photo-1300227012.cos.ap-nanjing.myqcloud.com/image-20201009152504884.png" alt="image-20201009152504884"></p>
+<p>嵌套条件表达式</p>
+<p><img src="https://photo-1300227012.cos.ap-nanjing.myqcloud.com/image-20201009152648569.png" alt="image-20201009152648569"></p>
+<p>我们在理解这个东西怎么计算，把所有分支部分算明白</p>
+<p>然后再回到总的地方</p>
+<p>所以最好不要使用嵌套的条件表达式，使得程序变得复杂，让别人来理解你的程序太困难</p>
+<h2 id="逗号运算"><a href="#逗号运算" class="headerlink" title="逗号运算"></a>逗号运算</h2><ul>
+<li>逗号用来连接两个表达式，并以其右边的表达式的值作为它的结果。逗号的优先级是所有的运算符中最低的，所以它两边的表达式会先计算；都好的组合关系是自左向右，所以左边的表达式会先计算，二右边的表达式的值就留下来作为逗号运算的结果。</li>
+</ul>
+<p>例如：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> i;</span><br><span class="line">i = <span class="number">3</span>+<span class="number">4</span>, <span class="number">5</span>+<span class="number">6</span>;</span><br><span class="line"></span><br><span class="line">pritnf(<span class="string">"%d/n"</span>,i);</span><br></pre></td></tr></table></figure>
+
+<p>运行结果，会提示没有用到 5+6</p>
+<p>因为 3+4 被赋值给了 i ，<code>i= 3+4</code>这是一个表达式</p>
+<p>赋值优先级比 ， 要来的高，所以 <code>i= 3+4</code> 会先算</p>
+<p>然后再去算5+6 ，但是没有交给任何人，表达式的结果没有用到。</p>
+<p>如果：</p>
+<p><code>i =( 3+4, 5+6 );</code></p>
+<p>加了一个括号提升了优先级，但会提示 3+4 没有用到</p>
+<p>最后运行结果 11</p>
+<p>表示是 逗号后的运算结果，去赋值给了 i</p>
+<hr>
+<p>逗号的作用，主要是在for中使用</p>
+<p><code>for ( i=0, j=10; i&lt;j ;i++, j-- )</code></p>
+<p>其中有三个表达式，想要在里面放多个计算时候，就可以使用逗号</p>
+<hr>
+
+    </div>
+
+    
+    
+    
+        <div class="reward-container">
+  <div></div>
+  <button onclick="var qr = document.getElementById('qr'); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    打赏
+  </button>
+  <div id="qr" style="display: none;">
+      
+      <div style="display: inline-block;">
+        <img src="/images/wechat_channel.jpg" alt="sunrise 微信支付">
+        <p>微信支付</p>
+      </div>
+
+  </div>
+</div>
+
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/C/" rel="tag"><i class="fas fa-dog"></i> C</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/09/27/%E5%BE%AA%E7%8E%AF%E7%9A%84%E8%AE%A1%E7%AE%97%E5%92%8C%E9%80%89%E6%8B%A9/" rel="prev" title="循环的计算和选择">
+      <i class="fa fa-chevron-left"></i> 循环的计算和选择
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#bool"><span class="nav-number">1.</span> <span class="nav-text">bool</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#逻辑运算"><span class="nav-number">2.</span> <span class="nav-text">逻辑运算</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#示例"><span class="nav-number">2.1.</span> <span class="nav-text">示例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#优先级"><span class="nav-number">2.2.</span> <span class="nav-text">优先级</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#单目运算符"><span class="nav-number">2.2.1.</span> <span class="nav-text">单目运算符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#双目运算符"><span class="nav-number">2.2.2.</span> <span class="nav-text">双目运算符</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#短路"><span class="nav-number">3.</span> <span class="nav-text">短路</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#条件运算符"><span class="nav-number">4.</span> <span class="nav-text">条件运算符</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#逗号运算"><span class="nav-number">4.1.</span> <span class="nav-text">逗号运算</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="sunrise"
+      src="/uploads/duck.jpeg">
+  <p class="site-author-name" itemprop="name">sunrise</p>
+  <div class="site-description" itemprop="description">记录所学</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">15</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/sunrisely" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;sunrisely" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/atom.xml" title="RSS → &#x2F;atom.xml"><i class="fa fa-rss fa-fw"></i>RSS</a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title"><i class="fas fa-piggy-bank fa-fw"></i>
+      sunrise
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="http://www.baidu.com/" title="http:&#x2F;&#x2F;www.baidu.com" rel="noopener" target="_blank">嘘！</a>
+        </li>
+    </ul>
+  </div>
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Powered by sunrise</span>
+</div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+<script src="/js/bookmark.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+</body>
+</html>
