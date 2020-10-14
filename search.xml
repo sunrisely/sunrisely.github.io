@@ -386,11 +386,13 @@
 <hr>
 <figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	     <span class="comment">//如果定义 const int MRN = 2;</span></span><br><span class="line">	<span class="keyword">int</span> type;</span><br><span class="line">	</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;type);</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">switch</span> (type) &#123;</span><br><span class="line">	<span class="keyword">case</span> <span class="number">1</span>;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"你好"</span>);</span><br><span class="line">		<span class="keyword">break</span>;</span><br><span class="line">	<span class="keyword">case</span> <span class="number">2</span>; <span class="comment">//假如定义成MRN</span></span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"你好"</span>);</span><br><span class="line">		<span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">3</span>;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"你好"</span>);</span><br><span class="line">		<span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">default</span>:</span><br><span class="line">    	<span class="built_in">printf</span>(<span class="string">"啊,什么啊?"</span>);</span><br><span class="line">    	<span class="keyword">break</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>//备注 常数问题，在case 2 后面替换成MRN 变量也可以编译运行，但这种<strong>方法</strong>只能用于 <strong><font color='#ff9900'>C99</font></strong></p>
+<p>//备注 常数问题</p>
+<p>case 2 后面替换成MRN 变量也可以编译运行，但这种<strong>方法</strong>只能用于 <strong><font color='#ff9900'>C99</font></strong></p>
 <h2 id="break"><a href="#break" class="headerlink" title="break"></a>break</h2><p>代码示例： </p>
 <figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> type;	</span><br><span class="line"></span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;type);</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">switch</span> (type)&#123;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">case</span> <span class="number">1</span>:</span><br><span class="line">	<span class="keyword">case</span> <span class="number">2</span>:</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"你好\n"</span>);</span><br><span class="line">		<span class="keyword">break</span>;</span><br><span class="line">	<span class="keyword">case</span> <span class="number">3</span>:</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"晚上好\n"</span>);</span><br><span class="line">	<span class="keyword">case</span> <span class="number">4</span>:</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"再见\n"</span>);</span><br><span class="line">	<span class="keyword">break</span>;</span><br><span class="line">	<span class="keyword">default</span>:</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"啊，什么啊？"</span>);</span><br><span class="line">		<span class="keyword">break</span>;		</span><br><span class="line">	 &#125; </span><br><span class="line">	 <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p><code>switch ( type)</code>,如果type等于某个值，去case所代表的那个位置去，做后面那个句子 ，一直往下做，直到遇到break 为止，如果没有遇到break，又进入到下一个case，那就会进去，</p>
+<p><code>switch ( type)</code></p>
+<p>如果type等于某个值，去case所代表的那个位置去，做后面那个句子 ，一直往下做，直到遇到break 为止，如果没有遇到break，又进入到下一个case，那就会进去。</p>
 <p>运行结果：</p>
 <ul>
 <li><p>输入 1，屏幕输出<br><img src="https://photo-1300227012.cos.ap-nanjing.myqcloud.com/image-20201013235442305.png" alt="image-20201013235442305"></p>
@@ -1333,6 +1335,21 @@
 <p>第二个式子中，是提前经过定义变量，所以算t2的时候 i++=15后，又进行++i=15+1 =16</p>
 <p>所以 t2=16</p>
 ]]></content>
+      <tags>
+        <tag>C</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>循环的例子</title>
+    <url>/2020/10/14/%E5%BE%AA%E7%8E%AF%E7%9A%84%E4%BE%8B%E5%AD%90/</url>
+    <content><![CDATA[<p>循环的例子。</p>
+<a id="more"></a>
+
+<hr>
+]]></content>
+      <categories>
+        <category>C</category>
+      </categories>
       <tags>
         <tag>C</tag>
       </tags>
