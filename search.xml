@@ -1401,6 +1401,85 @@
 </tbody></table>
 <p>所以，改为 <code>x  &gt; 0</code> , <code>ret = -1</code> ，也是对的</p>
 <p>所以题目没有标准答案，只有这个标准答案是对的，这是不可能的，也对于编程来说，肯定有很多不同的方法，只有最优化的办法，令人能看得懂，运行速度，占内存。</p>
+<hr>
+<h1 id="计数循环"><a href="#计数循环" class="headerlink" title="计数循环"></a>计数循环</h1><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> count =<span class="number">100</span>;</span><br><span class="line"><span class="keyword">while</span> ( count &gt;=<span class="number">0</span> ) &#123;</span><br><span class="line">	count --;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%d\n"</span>,count);</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"发射!\n"</span>);</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>这个循环需要执行多少次？</li>
+<li>循环停下来的伤害，有没有输出最后的0？</li>
+<li>循环结束后，count的值是多少？</li>
+</ul>
+<p>小套路：如果要模拟运行一个很大次数的循环，可以模拟较少的循环次数，然后作出判断。</p>
+<p>例如用3去测试：</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> n = <span class="number">3</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> (n &gt;= <span class="number">0</span> ) &#123;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%d"</span>, n);</span><br><span class="line">	n--;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"发射\n"</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br></pre></td></tr></table></figure>
+
+<p>当 n = 3 时，循环走了四轮</p>
+<table>
+<thead>
+<tr>
+<th align="center">n</th>
+<th align="center">输出</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">3</td>
+<td align="center">3</td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="center">2</td>
+</tr>
+<tr>
+<td align="center">1</td>
+<td align="center">1</td>
+</tr>
+<tr>
+<td align="center">0</td>
+<td align="center">0</td>
+</tr>
+<tr>
+<td align="center">-1</td>
+<td align="center"></td>
+</tr>
+</tbody></table>
+<ul>
+<li>这个循环需要执行 101 次</li>
+<li>有输出最后的0</li>
+<li>count 值 = -1</li>
+</ul>
+<p>但如果 n– 在printf(“%d”, n); 上面，结果又会是另一种情况</p>
+<p><code>n--;</code></p>
+<p><code>printf(&quot;%d&quot;, n);</code></p>
+<table>
+<thead>
+<tr>
+<th>n</th>
+<th align="center">输出</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>3</td>
+<td align="center">2</td>
+</tr>
+<tr>
+<td>2</td>
+<td align="center">1</td>
+</tr>
+<tr>
+<td>1</td>
+<td align="center">0</td>
+</tr>
+<tr>
+<td>0</td>
+<td align="center">-1</td>
+</tr>
+<tr>
+<td>-1</td>
+<td align="center"></td>
+</tr>
+</tbody></table>
+<p>第一个输出值和最后一个改变了</p>
+<p> 没有选择哪一个的问题，看程序要求怎样，是最后要有-1输出还是没有，去有效的调整。</p>
 ]]></content>
       <categories>
         <category>C</category>
