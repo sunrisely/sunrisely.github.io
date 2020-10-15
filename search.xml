@@ -1342,10 +1342,65 @@
   <entry>
     <title>循环的例子</title>
     <url>/2020/10/14/%E5%BE%AA%E7%8E%AF%E7%9A%84%E4%BE%8B%E5%AD%90/</url>
-    <content><![CDATA[<p>循环的例子。</p>
+    <content><![CDATA[<p><strong><font color='#ff9900'>循环的例子。</font></strong></p>
+<p>一些习题</p>
+<p>编程难在哪</p>
+<p>想问题，难在怎么把问题变成程序，怎么去处理，在这个程序中可能遇到的一些，细微小的情况。</p>
 <a id="more"></a>
 
 <hr>
+<h1 id="例题-log2x"><a href="#例题-log2x" class="headerlink" title="例题  log2x"></a>例题  log2x</h1><p>题目：算二的几次方</p>
+<p><code>log2x</code> 的意思就是求 x 是 2 的多少次幂</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> x;</span><br><span class="line">	<span class="keyword">int</span> ret = <span class="number">0</span>;</span><br><span class="line">	</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;x);</span><br><span class="line">	<span class="keyword">int</span> t=x; </span><br><span class="line">    </span><br><span class="line">	<span class="keyword">while</span>( x &gt; <span class="number">1</span> )&#123;</span><br><span class="line">		x/= <span class="number">2</span>;</span><br><span class="line">		ret ++;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"log2 of %d is %d."</span>,t, ret);</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>第<strong><font color='#2eb82e'> 9</font></strong> 行 作用是：</p>
+<p> x 是循环里计算完剩下的值，如果在后面应用，x 值只会是 1</p>
+<p><strong><font color='#ff9900'>计算之前先保存原始的值，后面可能有用</font></strong></p>
+<hr>
+<p>因为是算<code>log2x</code> ，所以<code>log2x</code> 的<strong><font color='#2eb82e'> 0</font></strong> 次方 是 1，所以最小需要比 1 大 。</p>
+<p>如果 写成 <code>while ( x &gt;= 2 )</code>，也是一致的</p>
+<p>如果 写成 <code>while ( x &gt; 2 )</code>,这个 x=2 循环不会进去,如果要让 x =2，不进入循环，并且结果 ret 能得到 1 ，修改初始值为 1，但如果ret初始值为 1，那么 x=1 的情况，就不对了，应该ret = 0；如果要兼顾这两种情况，所以 x &gt; 1.</p>
+<p>如果 让 <code>x &gt; 0</code>;<strong><font color='#2eb82e'> 0 </font></strong>是不可能成为幂值，这个循环还能对，如果 <code>x = 1</code>进去,比<strong><font color='#2eb82e'> 0 </font></strong>大，会去  /2，变成了<strong><font color='#2eb82e'> 0</font></strong>，但是 ret 会进行 一次++ ，成为了 1 ，算<code>log2x</code>，所以答案错误。所以把 ret = -1 ;</p>
+<p>如果 x = 1;</p>
+<table>
+<thead>
+<tr>
+<th align="center">x</th>
+<th align="center">ret</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">1</td>
+<td align="center">-1</td>
+</tr>
+<tr>
+<td align="center">0</td>
+<td align="center">0</td>
+</tr>
+</tbody></table>
+<p>如果 x = 2;</p>
+<table>
+<thead>
+<tr>
+<th align="center">x</th>
+<th align="center">ret</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">2</td>
+<td align="center">-1</td>
+</tr>
+<tr>
+<td align="center">1</td>
+<td align="center">0</td>
+</tr>
+<tr>
+<td align="center">0</td>
+<td align="center">1</td>
+</tr>
+</tbody></table>
+<p>所以，改为 <code>x  &gt; 0</code> , <code>ret = -1</code> ，也是对的</p>
+<p>所以题目没有标准答案，只有这个标准答案是对的，这是不可能的，也对于编程来说，肯定有很多不同的方法，只有最优化的办法，令人能看得懂，运行速度，占内存。</p>
 ]]></content>
       <categories>
         <category>C</category>
