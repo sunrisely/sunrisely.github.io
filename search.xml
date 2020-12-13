@@ -1413,7 +1413,7 @@
 <p>例如用3去测试：</p>
 <figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> n = <span class="number">3</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> (n &gt;= <span class="number">0</span> ) &#123;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%d"</span>, n);</span><br><span class="line">	n--;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"发射\n"</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br></pre></td></tr></table></figure>
 
-<p>当 n = 3 时，循环走了四轮</p>
+<p>当 <code>n = 3</code> 时，循环走了四轮</p>
 <table>
 <thead>
 <tr>
@@ -1480,6 +1480,41 @@
 </tbody></table>
 <p>第一个输出值和最后一个改变了</p>
 <p> 没有选择哪一个的问题，看程序要求怎样，是最后要有-1输出还是没有，去有效的调整。</p>
+<h1 id="猜数游戏"><a href="#猜数游戏" class="headerlink" title="猜数游戏"></a>猜数游戏</h1><p>让计算机来想一个数，然后让用户来猜。用户每输入一个数，就告诉它是大了还是小了，直到用户猜中为止，最后还要告诉用户猜了多少次。</p>
+<p>思路：</p>
+<ul>
+<li>因为需要不断重复让用户猜，所以需要用到循环</li>
+<li>在实际写出程序之前，我们可以先用文字描述程序的思路。</li>
+<li>核心重点是循环的条件</li>
+<li>人们往往会考虑循环终止的条件</li>
+</ul>
+<ol>
+<li>计算机随机想一个数，记在变量<code>number</code>里；</li>
+<li>一个负责记次数的变量<code>count</code>初始化为<code>0</code>；</li>
+<li>让用户输入一个数字a;</li>
+<li><code>count</code>递增（加一）；</li>
+<li>判断a和<code>number</code>的大小关系，如果<code>a</code>大，就输出“大”；如果a小就输出“小”；</li>
+<li>如果<code>a</code>和<code>number</code>是不相等的（无论大还是小），程序转回到第3步；</li>
+<li>否则，程序输出“猜中”和次数，然后结束。</li>
+</ol>
+<p><strong><font color='#ff9900'>循环条件是a和number不相等。</font></strong></p>
+<h2 id="随机数"><a href="#随机数" class="headerlink" title="随机数"></a>随机数</h2><ul>
+<li>每次召唤<code>rand()</code>就得到一个随机的整数。</li>
+</ul>
+<p>要使用<code>rand</code> 还需要一些条件</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;time.h&gt;</span></span></span><br><span class="line"></span><br><span class="line">srand(time(<span class="number">0</span>));</span><br></pre></td></tr></table></figure>
+
+<p><strong><font color='#ff9900'>取余</font></strong></p>
+<p><code>%100</code></p>
+<p><code>x % n</code> 的结果是<code>[0,n-1]</code>的一个整数</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;time.h&gt;</span></span></span><br><span class="line"></span><br><span class="line">srand(time(<span class="number">0</span>));</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> a = rand();</span><br><span class="line"></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"%d\n"</span>,a%<span class="number">100</span>)</span><br></pre></td></tr></table></figure>
+
+<p>这样取余，最后结果就只会取一百以内的数，随机产生一百以内的数</p>
+<p>code：</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt; </span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt; </span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;time.h&gt; </span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	srand(time(<span class="number">0</span>));</span><br><span class="line">	<span class="keyword">int</span> number = rand()%<span class="number">100</span>+<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">int</span> count = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">int</span> a = <span class="number">0</span>;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"我已经想好了一个1到100之间的数。"</span>);</span><br><span class="line">	<span class="keyword">do</span>&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"请猜这个1到100之间数："</span>);</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;a);</span><br><span class="line">		count ++;</span><br><span class="line">		<span class="keyword">if</span> (a &gt; number )&#123;</span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">"你猜的数大了。"</span>);</span><br><span class="line">		&#125;<span class="keyword">else</span> <span class="keyword">if</span>(a &lt; number)&#123;</span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">"你猜的数小了。"</span>);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;<span class="keyword">while</span> (a != number);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"太好了，你用了%d次就猜到了答案。\n"</span>,count);</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>结果：</p>
+<p><img src="https://photo-1300227012.cos.ap-nanjing.myqcloud.com/image-20201213144110544.png" alt="image-20201213144110544"></p>
 ]]></content>
       <categories>
         <category>C</category>
